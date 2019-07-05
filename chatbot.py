@@ -31,6 +31,7 @@ remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)	#re
 #funtion to lemmatize a sentance
 lemmer = WordNetLemmatizer()	#this is an internal dictionary
 def lemmatize(p):
+    print(p)
     if p[1][0] in {'N','V'}:
         return lemmer.lemmatize(p[0].lower(), pos=p[1][0].lower())
     return p[0]
@@ -38,16 +39,18 @@ def lemmatize(p):
 
 def removeStopWords(sentance):
     words = word_tokenize(sentance)
-    filtered_words = [word for word in word_list if word not in stopwords.words('english')]
-    return words
+    filtered_words = [word for word in words if word not in stopwords.words('english')]
+    print(filtered_words)
+    return filtered_words
 
 def treatInput(sentence):
     sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
-    print(sentence)
-    sentence2 = removeStopWords(sentence)
-    print(sentence2)
-    pairs = pos_tag(sentence)
-    print(pairs)
+    sentence_without_stop = removeStopWords(sentence)
+    pairs = pos_tag(sentence_without_stop)
+    result = lemmatize(pairs)
+
+    print(result)
+
 
 
 #function to be called
