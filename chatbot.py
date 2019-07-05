@@ -36,12 +36,20 @@ def lemmatize(p):
         return lemmer.lemmatize(p[0].lower(), pos=p[1][0].lower())
     return p[0]
 
-
+#STOPWORDS
 def removeStopWords(sentance):
     words = word_tokenize(sentance)
     filtered_words = [word for word in words if word not in stopwords.words('english')]
     print(filtered_words)
     return filtered_words
+
+
+def correccio(text):
+    s = TextBlob("I havv good speling!")
+    return s.correct()
+
+
+
 
 def treatInput(sentence):
     sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
@@ -77,13 +85,16 @@ def responde(bot, update):
 
 #
 #load the access token
-TOKEN = open('token.txt').read().strip()
+#TOKEN = open('token.txt').read().strip()
 
-updater = Updater(token= TOKEN)
-dispatcher = updater.dispatcher
+#updater = Updater(token= TOKEN)
+#dispatcher = updater.dispatcher
 
 #handling the call
-dispatcher.add_handler(MessageHandler(Filters.text, responde))
+#dispatcher.add_handler(MessageHandler(Filters.text, responde))
 
 #starting the bot
-updater.start_polling()
+#updater.start_polling()
+correcio("hola")
+
+
