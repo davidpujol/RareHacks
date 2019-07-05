@@ -14,9 +14,6 @@ from nltk import pos_tag
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from textblob import TextBlob
-from nltk import tree2conlltags
-
-
 
 # ******************************************************************
 # GREETINGS
@@ -50,16 +47,6 @@ def removeStopWords(sentance):
     filtered_words = [word for word in words if word not in stopwords.words('english')]
     return filtered_words
 
-
-# requirements: pip install googletrans
-from googletrans import Translator
-# defining callback function for the /tr command
-def tr(bot, update):
-    translator = Translator()
-    msg = update.message.text[3:]# delete "/tr "
-    msg_tr = translator.translate(msg).text
-    bot.send_message(chat_id=update.message.chat_id, text=msg_tr)
-
 #CORRECCIO
 def correccio(text):
     s = TextBlob(text)
@@ -70,8 +57,6 @@ def extractSintagma (text):
     grammar = "NP: {<DT>?<JJ>*<NN>}"
     cp = nltk.RegexpParser(grammar)
     result = cp.parse(pairs)
-    result = tree2conlltags(result)
-
     return result
 
 def treatInput(sentence):
@@ -82,11 +67,32 @@ def treatInput(sentence):
     result = [lemmatize(p) for p in pairs]
     result = extractSintagma(result)
     return result
+
 # ******************************************************************
+
+from googletrans import Translator
+
+def tr2english(text):
+    translator = Translator()
+    msg_tr = translator.translate(text).text
+    global language
+    language = translator.detect(text).lang
+    return msg_tr
+
+def tr2other(text):
+    print(text)
+    translator = Translator()
+    print(language)
+    msg_tr = translator.translate(text, dest=str(language)).text
+    print(msg_tr)
+    return msg_tr
+
+# ******************************************************************
+
 
 #function to be called
 def responde(bot, update):
-    user_response = update.message.text
+    user_response = tr2english(update.message.text)
 
     if (user_response != 'bye' or user_response != 'Bye'):
             if (user_response == 'thanks' or user_response == 'thank you'):
@@ -96,8 +102,8 @@ def responde(bot, update):
                 if (greeting(user_response) != None):
                     bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response))
                 else:
-                    a = treatInput(user_response)
-                    bot.send_message(chat_id = update.message.chat_id, text=a)
+                    aux = treatInput(user_response)
+                    bot.send_message(chat_id = update.message.chat_id, text=aux)
     else:
             bot.send_message(chat_id = update.message.chat_id, text="Goodbye!!")
 
