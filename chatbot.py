@@ -42,6 +42,16 @@ def removeStopWords(sentance):
     return words
 
 
+# requirements: pip install googletrans
+from googletrans import Translator
+# defining callback function for the /tr command
+def tr(bot, update):
+    translator = Translator()
+    msg = update.message.text[3:]# delete "/tr "
+    msg_tr = translator.translate(msg).text
+    bot.send_message(chat_id=update.message.chat_id, text=msg_tr)
+
+#CORRECCIO
 def correccio(text):
     s = TextBlob("I havv good speling!")
     return s.correct()
