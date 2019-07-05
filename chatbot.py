@@ -14,8 +14,11 @@ from nltk import pos_tag
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from textblob import TextBlob
+from nltk import tree2conlltags
 
 
+
+# ******************************************************************
 # GREETINGS
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
 GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me"]
@@ -26,6 +29,10 @@ def greeting(sentence):
         if word.lower() in GREETING_INPUTS:
             return random.choice(GREETING_RESPONSES)
 
+
+
+# ******************************************************************
+#TREAT THE INPUT
 
 #LEMMATIZATION
 remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)	#remove punctuation
@@ -48,19 +55,24 @@ def correccio(text):
     s = TextBlob(text)
     return s.correct()
 
+def extractSintagma (text):
+    pairs = pos_tag(text)
+    grammar = "NP: {<DT>?<JJ>*<NN>}"
+    cp = nltk.RegexpParser(grammar)
+    result = cp.parse(pairs)
+    result = tree2conlltags(result)
+
+    return result
 
 def treatInput(sentence):
-    sentence = str(correccio(sentence))
+    sentence = str(correccio(sentence.lower()))
     sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
-    print(sentence)
     aux = removeStopWords(sentence)
-    print(aux)
     pairs = pos_tag(aux)
-    print(pairs)
-    result = lemmatize(pairs)
-    print(result)
-
-
+    result = [lemmatize(p) for p in pairs]
+    result = extractSintagma(result)
+    return result
+# ******************************************************************
 
 #function to be called
 def responde(bot, update):
@@ -74,13 +86,13 @@ def responde(bot, update):
                 if (greeting(user_response) != None):
                     bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response))
                 else:
-                    treatInput(user_response)
-                    bot.send_message(chat_id = update.message.chat_id, text="OTHER")
+                    a = treatInput(user_response)
+                    bot.send_message(chat_id = update.message.chat_id, text=a)
     else:
             bot.send_message(chat_id = update.message.chat_id, text="Goodbye!!")
 
 
-
+# ******************************************************************
 
 
 
