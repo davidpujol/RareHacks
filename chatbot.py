@@ -13,6 +13,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from nltk import pos_tag
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from textblob import TextBlob
+
 
 # GREETINGS
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
@@ -31,7 +33,6 @@ remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)	#re
 #funtion to lemmatize a sentance
 lemmer = WordNetLemmatizer()	#this is an internal dictionary
 def lemmatize(p):
-    print(p)
     if p[1][0] in {'N','V'}:
         return lemmer.lemmatize(p[0].lower(), pos=p[1][0].lower())
     return p[0]
@@ -40,23 +41,23 @@ def lemmatize(p):
 def removeStopWords(sentance):
     words = word_tokenize(sentance)
     filtered_words = [word for word in words if word not in stopwords.words('english')]
-    print(filtered_words)
     return filtered_words
 
 
 def correccio(text):
-    s = TextBlob("I havv good speling!")
+    s = TextBlob(text)
     return s.correct()
 
 
-
-
 def treatInput(sentence):
+    sentence = str(correccio(sentence))
     sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
-    sentence_without_stop = removeStopWords(sentence)
-    pairs = pos_tag(sentence_without_stop)
+    print(sentence)
+    aux = removeStopWords(sentence)
+    print(aux)
+    pairs = pos_tag(aux)
+    print(pairs)
     result = lemmatize(pairs)
-
     print(result)
 
 
@@ -83,18 +84,16 @@ def responde(bot, update):
 
 
 
-#
 #load the access token
-#TOKEN = open('token.txt').read().strip()
+TOKEN = open('token.txt').read().strip()
 
-#updater = Updater(token= TOKEN)
-#dispatcher = updater.dispatcher
+updater = Updater(token= TOKEN)
+dispatcher = updater.dispatcher
 
 #handling the call
-#dispatcher.add_handler(MessageHandler(Filters.text, responde))
+dispatcher.add_handler(MessageHandler(Filters.text, responde))
 
 #starting the bot
-#updater.start_polling()
-correcio("hola")
+updater.start_polling()
 
 
