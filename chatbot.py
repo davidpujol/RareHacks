@@ -13,6 +13,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from nltk import pos_tag
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from textblob import TextBlob
+
 
 # GREETINGS
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
@@ -38,8 +40,8 @@ def lemmatize(p):
 #STOPWORDS
 def removeStopWords(sentance):
     words = word_tokenize(sentance)
-    filtered_words = [word for word in word_list if word not in stopwords.words('english')]
-    return words
+    filtered_words = [word for word in words if word not in stopwords.words('english')]
+    return filtered_words
 
 
 # requirements: pip install googletrans
@@ -53,19 +55,21 @@ def tr(bot, update):
 
 #CORRECCIO
 def correccio(text):
-    s = TextBlob("I havv good speling!")
+    s = TextBlob(text)
     return s.correct()
 
 
-
-
 def treatInput(sentence):
+    sentence = str(correccio(sentence))
     sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
     print(sentence)
-    sentence2 = removeStopWords(sentence)
-    print(sentence2)
-    pairs = pos_tag(sentence)
+    aux = removeStopWords(sentence)
+    print(aux)
+    pairs = pos_tag(aux)
     print(pairs)
+    result = lemmatize(pairs)
+    print(result)
+
 
 
 #function to be called
@@ -90,18 +94,16 @@ def responde(bot, update):
 
 
 
-#
 #load the access token
-#TOKEN = open('token.txt').read().strip()
+TOKEN = open('token.txt').read().strip()
 
-#updater = Updater(token= TOKEN)
-#dispatcher = updater.dispatcher
+updater = Updater(token= TOKEN)
+dispatcher = updater.dispatcher
 
 #handling the call
-#dispatcher.add_handler(MessageHandler(Filters.text, responde))
+dispatcher.add_handler(MessageHandler(Filters.text, responde))
 
 #starting the bot
-#updater.start_polling()
-correcio("hola")
+updater.start_polling()
 
 
