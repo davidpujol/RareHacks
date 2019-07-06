@@ -18,7 +18,6 @@ from textblob import TextBlob
 
 import pandas as pd
 
-
 # ******************************************************************
 # GREETINGS
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
@@ -91,8 +90,6 @@ def tr2other(text):
 
 
 
-
-
 # ******************************************************************
 #DICTIONARY OF TYPES OF MELANOMA
 
@@ -125,9 +122,18 @@ sinonims = [
     ['Malignant melanoma of meninges','Primary melanoma of the CNS']
     ]
 
-dic = dict(zip(tipus,sinonims))
-types_melanomes = [el.lower() for el in tipus] + [item.lower() for sublist in sinonims for item in sublist]
+dic = {}
+types_melanomes = []
+for i in range(0,len(sinonims)):
+    family = sinonims[i]
+    type = tipus[i]
+    dic[type.lower()] = type.lower()
+    for sin in family:
+        dic[sin.lower()] = type.lower()
+        types_melanomes.append(sin.lower())
 
+print(types_melanomes)
+print(dic)
 # ******************************************************************
 
 #DICTIONARY TYPES OF MEDICIN
@@ -160,14 +166,34 @@ def distancia(hospital, persona):
 def getLatLong (address):
     g = geocoder.mapquest(address, key='SBCjXsQ99VWjbfwSFYh1UDv3QhzYfyGj')
     lat = g.lat
-    long = g.long
-    return [lat,long]
+    lon = g.lng
+    return [lat,lon]
+
+def computeLatsAndLongs(hospitals_information):
+    for i in range(0,len(hospitals_information)):
+        list = getLatLong(hospitals_information[i][2])
+        hospitals_information[i][3] = list[0]
+        hospitals_information[i][4] = list[1]
+
+
 
 
 # *********************************************************************
+#WE WILL USE THIS TO READ THE INFORMATION OF THE DISEASE WE HAVE FOUND
 
 
+global information_hospitals
+information_hospitals = []
+hospitals = pd.read_csv('Intraocular_melanoma.csv').values
 
+for hospital in hospitals:
+    name = hospital[4]
+    telefon = hospital[5]
+    address = hospital[6]
+    lat = hospital[7]
+    long = hospital[8]
+    if (not pd.isnull(name)) and (not pd.isnull(telefon)) and (not pd.isnull(address)) and (not pd.isnull(lat)) and (not pd.isnull(long)):
+        information_hospitals.append([name,telefon,address,lat,long])
 
 
 # ******************************************************************
@@ -175,84 +201,93 @@ def getLatLong (address):
 
 #function to be called
 def responde(bot, update, user_data):
-    user_response = tr2english(update.message.text)
+    user_response = tr2english(update.message.text).lower()
+  #  words = word_tokenize(user_response)
 
-    if user_response == 'bye' or user_response=='Bye':
-        bot.send_message(chat_id=update.message.chat_id, text=tr2other("Goodbye!!"))
+ #   if user_response == 'bye' or user_response=='Bye':
+ #       bot.send_message(chat_id=update.message.chat_id, text=tr2other("Goodbye!!"))
 
-    elif user_response == 'thanks' or user_response == 'thank you':
-            bot.send_message(chat_id=update.message.chat_id, text=tr2other("You are very welcome"))
+ #   elif user_response == 'thanks' or user_response == 'thank you':
+ #           bot.send_message(chat_id=update.message.chat_id, text=tr2other("You are very welcome"))
 
-    elif greeting(user_response) is not None:   #when greetings appear
-        bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response)+ " " + update.message.chat.first_name)
+ #   elif greeting(user_response) is not None:   #when greetings appear
+ #       bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response)+ " " + update.message.chat.first_name)
+ #       bot.send_message(chat_id = update.message.chat_id, text=tr2other("It is very important for me to make sure that you have been already diagnosed by a professional. Could you please confirm me so?"))
 
+ #   elif 'diagnosed' not in user_data:
+ #       if ('no' in words) or ("n't" in words) or ("not" in words):
+ #           bot.send_message(chat_id=update.message.chat_id, text=tr2other("Don't worry. In this case we believe you should first go to a certified center to diagnose the exact type of melanoma that you suffer"))
 
-    elif 'diagnosed' not in user_data:
-        if ('no' in words) or ("n't" in words) or ("not" in words):
-            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Don't worry. In this case we believe you should first go to a certified center to diagnose the exact type of melanoma that you suffer"))
-
-
-            #we need to exit
-
-
-
-        else:
-            user_data['diagnosed'] = True
-            bot.send_message(chat_id=update.message.chat_id, text=tr2other(
-                "Then, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"))
+ #       else:
+ #           user_data['diagnosed'] = True
+ #           bot.send_message(chat_id = update.message.chat_id, text=tr2other("Then, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"))
 
 
-    elif 'type_disease' not in user_data:
-            words = word_tokenize(user_response)
-            if ('no' in words) or ("n't" in words) or ("not" in words):
-                bot.send_message(chat_id= update.message.chat_id, text=tr2other("Don't worry..."))
+ #   elif ('type_disease' not in user_data) and ('diagnosed' in user_data):
+ #           if ('no' in words) or ("n't" in words) or ("not" in words):
+ #               bot.send_message(chat_id= update.message.chat_id, text=tr2other("Don't worry..."))
 
-            else:
-                found = False
-                for type in types_melanomes:
-                    if type in user_response:
-                        found = True
-                        user_data['type_disease'] = type
+ #           else:
+ #               print(user_response)
+ #               found = False
+ #               for type in types_melanomes:
+ #                   if type in user_response:
+ #                       found = True
+ #                       user_data['type_disease'] = dic[type]
+ #                       print(user_data['type_disease'])
+ #               if found:
+ #                  bot.send_message(chat_id=update.message.chat_id, text=tr2other("Perfect"))
+ #                   bot.send_message(chat_id = update.message.chat_id, text=tr2other("Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?"))
 
-                if found:
-                    bot.send_message(chat_id=update.message.chat_id, text=tr2other("Perfect"))
-                    bot.send_message(chat_id = update.message.chat_id, text=tr2other("Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?"))
-
-                else:
-                    bot.send_message(chat_id=update.message.chat_id,text=tr2other("Go ahead and tell me what is its name, please."))
+  #              else:
+  #                  bot.send_message(chat_id=update.message.chat_id,text=tr2other("Go ahead and tell me what is its name, please."))
 
 
-    elif 'medicin' not in user_data:
-        bot.send_message(chat_id=update.message.chat_id, text="klasjdfladf")
-        user_data['medicin'] = user_response
+  #  elif 'medicin' not in user_data:
+  #      bot.send_message(chat_id=update.message.chat_id, text="klasjdfladf")
+  #      user_data['medicin'] = user_response
 
+
+  #  else:
+    words = treatInput(user_response)
+    #check if this is a where sentence.
+    if 'where' in words:
+        bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option."))
 
     else:
-        aux = treatInput(user_response)
-        #check if this is a where sentence.
-        if 'where' in aux:
-            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option."))
+        bot.send_message(chat_id = update.message.chat_id, text=words)
 
-        else:
-            bot.send_message(chat_id = update.message.chat_id, text=aux)
 
+
+def findClosestHospital(lat, long):
+    list = []
+    for i in range(0, len(information_hospitals)):
+        hospital = information_hospitals[i]
+        lat2 = hospital[3]
+        long2 = hospital[4]
+        distance = distancia([lat,long],[lat2,long2])
+        list.append([i,distance])
+
+    list = sorted(list, lambda x: x[1])
+    return list[0]
 
 
 def giveClosestHospital(bot, update, user_data):
     try:
-        file = pd.read_csv('drugs_labs_biobanks_dataset.csv').values
+        name = "%d.png" % random.randint(1000000, 9999999)
+        lat, lon = update.message.location.latitude,
+        update.message.location.longitude
 
-        for hospital in hospitals
+        index = findClosestHospital(lat,lon)
+        entry = information_hospitals[index]
+        lat = entry[3]
+        lon = entry[4]
 
-      #  name = "%d.png" % random.randint(1000000, 9999999)
-       # lat, lon = update.message.location.latitude,
-       # update.message.location.longitude
-       # mapa = StaticMap(500, 500)
-       # mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
-       # imatge = mapa.render()
-       # imatge.save(name)
-       # bot.send_photo(chat_id=update.message.chat_id,
-        #               photo=open(name, 'rb'))
+        mapa = StaticMap(500, 500)
+        mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
+        imatge = mapa.render()
+        imatge.save(name)
+        bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
         #os.remove(name)
 
     except Exception as e:
@@ -271,45 +306,10 @@ dispatcher = updater.dispatcher
 
 #handling the call
 dispatcher.add_handler(MessageHandler(Filters.text, responde, pass_user_data=True))
-dispatcher.add_handler(MessageHandler(Filters.location, giveClosestHospital, pass_user_data=True))
+dispatcher.add_handler(MessageHandler(Filters.location, giveClosestHospital, pass_user_data = True)) #telegram api
 
 #starting the bot
 updater.start_polling()
 
-
-
-
-
-
-
-# -------------------------------------
-"""
-import gensim
-import os
-import collections
-import smart_open
-import random
-
-test_data_dir = '{}'.format(os.sep).join([gensim.__path__[0], 'test', 'test_data'])
-lee_train_file = test_data_dir + os.sep + 'lee_background.cor'
-lee_test_file = test_data_dir + os.sep + 'lee.cor'
-
-def read_corpus(fname, tokens_only=False):
-    with smart_open.smart_open(fname, encoding="iso-8859-1") as f:
-        for i, line in enumerate(f):
-            if tokens_only:
-                yield gensim.utils.simple_preprocess(line)
-            else:
-                # For training data, add tags
-                yield gensim.models.doc2vec.TaggedDocument(gensim.utils.simple_preprocess(line), [i])
-
-train_corpus = list(read_corpus(lee_train_file))
-test_corpus = list(read_corpus(lee_test_file, tokens_only=True))
-
-model = gensim.models.doc2vec.Doc2Vec(vector_size=50, min_count=2, epochs=20)
-model.build_vocab(train_corpus)
-model.train(train_corpus, total_examples=model.corpus_count, epochs=model.epochs)
-
-"""
 
 
