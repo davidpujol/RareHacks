@@ -18,7 +18,7 @@ from textblob import TextBlob
 # ******************************************************************
 # GREETINGS
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
-GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me"]
+GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello"]
 
 def greeting(sentence):
     """If user's input is a greeting, return a greeting response"""
@@ -60,10 +60,11 @@ def extractSintagma (text):
     return result
 
 def treatInput(sentence):
-    sentence = str(correccio(sentence.lower()))
+   # sentence = str(correccio(sentence.lower()))
     sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
-    aux = removeStopWords(sentence)
-    pairs = pos_tag(aux)
+    #aux = removeStopWords(sentence)
+    words = word_tokenize(sentence)
+    pairs = pos_tag(words)
     result = [lemmatize(p) for p in pairs]
     result = extractSintagma(result)
     return result
@@ -80,61 +81,12 @@ def tr2english(text):
     return msg_tr
 
 def tr2other(text):
-    print(text)
     translator = Translator()
-    print(language)
     msg_tr = translator.translate(text, dest=str(language)).text
-    print(msg_tr)
     return msg_tr
 
 # ******************************************************************
-
-
-#function to be called
-def responde(bot, update, user_data):
-    user_response = tr2english(update.message.text)
-    if(user_response == 'bye' or user_response=='Bye'):
-        bot.send_message(chat_id=update.message.chat_id, text="Goodbye!!")
-
-    elif(user_response == 'thanks' or user_response == 'thank you'):
-            bot.send_message(chat_id=update.message.chat_id, text="You are very welcome")
-
-    elif (greeting(user_response) != None):   #when greetings appear
-        bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response))
-        bot.send_message(chat_id = update.message.chat_id, text = "Before starting, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"
-
-    elif user_data['type_disease'] == None:
-            if 'no' in update.message.text.lower():
-                bot.send_message(chat_id= update.message.chat_id, text="Don't worry...")
-
-            else:
-                #look if the user has introduced the exact name
-                found = False
-                for word in update.message.text:
-                    if word in listTypes:
-                        found = True
-                        user_data['type_disease'] = word
-                        break
-
-                if found:
-                    user_data['type_disease'] = update.message.text
-                    bot.send_message(chat_id=update.message.chat_id, text="Perfect")
-                    bot.send_message(chat_id = update.message.chat_id, text="Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?")
-
-                else:
-                    bot.send_message(chat_id=update.message.chat_id,text="Go ahead and tell me what is its name, please.")
-
-    elif user_data['medicin'] == None:
-        #extract the names of medicin
-
-
-    else:
-        aux = treatInput(user_response)
-        bot.send_message(chat_id = update.message.chat_id, text=aux)
-
-
-
-# ******************************************************************
+#DICTIONARY OF TYPES OF MELANOMA
 
 tipus = [
 'Uveal melanoma',
@@ -166,7 +118,73 @@ sinonims = [
     ]
 
 dic = dict(zip(tipus,sinonims))
-tipus_melanomes = tipus + [item for sublist in sinonims for item in sublist]
+types_melanomes = [el.lower() for el in tipus] + [item.lower() for sublist in sinonims for item in sublist]
+
+# ******************************************************************
+
+#DICTIONARY TYPES OF MEDICIN
+
+
+
+
+
+# ******************************************************************
+#GET
+
+
+
+
+# ******************************************************************
+
+
+#function to be called
+def responde(bot, update, user_data):
+    user_response = tr2english(update.message.text)
+
+    if user_response == 'bye' or user_response=='Bye':
+        bot.send_message(chat_id=update.message.chat_id, text=tr2other("Goodbye!!"))
+
+    elif user_response == 'thanks' or user_response == 'thank you':
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("You are very welcome"))
+
+    elif greeting(user_response) is not None:   #when greetings appear
+        bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response)+ " " + update.message.chat.first_name)
+        bot.send_message(chat_id = update.message.chat_id, text = tr2other("Before starting, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"))
+
+    elif 'type_disease' not in user_data:
+            words = word_tokenize(user_response)
+            if ('no' in words) or ("n't" in words) or ("not" in words):
+                bot.send_message(chat_id= update.message.chat_id, text=tr2other("Don't worry..."))
+
+            else:
+                found = False
+                for type in types_melanomes:
+                    if type in user_response:
+                        found = True
+                        user_data['type_disease'] = type
+
+                if found:
+                    bot.send_message(chat_id=update.message.chat_id, text=tr2other("Perfect"))
+                    bot.send_message(chat_id = update.message.chat_id, text=tr2other("Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?"))
+
+                else:
+                    bot.send_message(chat_id=update.message.chat_id,text=tr2other("Go ahead and tell me what is its name, please."))
+
+
+    elif 'medicin' not in user_data:
+        bot.send_message(chat_id=update.message.chat_id, text="klasjdfladf")
+        user_data['medicin'] = user_response
+
+
+    else:
+        aux = treatInput(user_response)
+        bot.send_message(chat_id = update.message.chat_id, text=aux)
+
+
+
+
+SBCjXsQ99VWjbfwSFYh1UDv3QhzYfyGj
+
 
 
 
