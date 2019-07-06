@@ -131,6 +131,8 @@ def distancia(acte, bici):
 
 
 # *********************************************************************
+
+
 tipus = [
 'Uveal melanoma',
 'Diffuse leptomeningeal melanocytosis',
@@ -143,7 +145,7 @@ tipus = [
 ]
 
 sinonims = [
-    ['choroidal melanoma' ,'iris melanoma'],
+    ['choroidal melanoma' ,'iris melanoma','Intraocular melanoma'],
     ['DLM Leptomeningeal melanomatosis'],
     ['B-K mole syndrome',
     'FAMM-PC syndrome',
