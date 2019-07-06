@@ -91,21 +91,47 @@ def tr2other(text):
 
 
 #function to be called
-def responde(bot, update):
+def responde(bot, update, user_data):
     user_response = tr2english(update.message.text)
+    if(user_response == 'bye' or user_response=='Bye'):
+        bot.send_message(chat_id=update.message.chat_id, text="Goodbye!!")
 
-    if (user_response != 'bye' or user_response != 'Bye'):
-            if (user_response == 'thanks' or user_response == 'thank you'):
-                bot.send_message(chat_id=update.message.chat_id, text="You are very welcome")
+    elif(user_response == 'thanks' or user_response == 'thank you'):
+            bot.send_message(chat_id=update.message.chat_id, text="You are very welcome")
+
+    elif (greeting(user_response) != None):   #when greetings appear
+        bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response))
+        bot.send_message(chat_id = update.message.chat_id, text = "Before starting, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"
+
+    elif user_data['type_disease'] == None:
+            if 'no' in update.message.text.lower():
+                bot.send_message(chat_id= update.message.chat_id, text="Don't worry...")
 
             else:
-                if (greeting(user_response) != None):
-                    bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response))
+                #look if the user has introduced the exact name
+                found = False
+                for word in update.message.text:
+                    if word in listTypes:
+                        found = True
+                        user_data['type_disease'] = word
+                        break
+
+                if found:
+                    user_data['type_disease'] = update.message.text
+                    bot.send_message(chat_id=update.message.chat_id, text="Perfect")
+                    bot.send_message(chat_id = update.message.chat_id, text="Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?")
+
                 else:
-                    aux = treatInput(user_response)
-                    bot.send_message(chat_id = update.message.chat_id, text=aux)
+                    bot.send_message(chat_id=update.message.chat_id,text="Go ahead and tell me what is its name, please.")
+
+    elif user_data['medicin'] == None:
+        #extract the names of medicin
+
+
     else:
-            bot.send_message(chat_id = update.message.chat_id, text="Goodbye!!")
+        aux = treatInput(user_response)
+        bot.send_message(chat_id = update.message.chat_id, text=aux)
+
 
 
 # ******************************************************************
@@ -119,7 +145,7 @@ updater = Updater(token= TOKEN)
 dispatcher = updater.dispatcher
 
 #handling the call
-dispatcher.add_handler(MessageHandler(Filters.text, responde))
+dispatcher.add_handler(MessageHandler(Filters.text, responde, pass_user_data = True))
 
 #starting the bot
 updater.start_polling()
