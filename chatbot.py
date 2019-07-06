@@ -119,7 +119,7 @@ updater = Updater(token= TOKEN)
 dispatcher = updater.dispatcher
 
 #handling the call
-dispatcher.add_handler(MessageHandler(Filters.text, responde))
+dispatcher.add_handler(MessageHandler(Filters.text, responde, pass_user_data=True))
 
 #starting the bot
 updater.start_polling()
