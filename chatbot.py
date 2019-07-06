@@ -88,6 +88,29 @@ def tr2other(text):
 # ******************************************************************
 #DICTIONARY OF TYPES OF MELANOMA
 
+
+def radians(c):
+    return pi/180 * c
+
+def distancia(acte, bici):
+    lat1 = radians(float(acte.lat))
+    long1 = radians(float(acte.long))
+    lat2 = radians(float(bici.lat))
+    long2 = radians(float(bici.long))
+    lat = abs(lat2-lat1)
+    long = abs(long2-long1)
+    a = sin(lat/2)**2+cos(lat1)*cos(lat2)*sin(long/2)**2
+    c = 2*atan2(sqrt(a),sqrt(1-a))
+    return R*c
+
+
+
+
+
+
+# *********************************************************************
+
+
 tipus = [
 'Uveal melanoma',
 'Diffuse leptomeningeal melanocytosis',
@@ -100,7 +123,7 @@ tipus = [
 ]
 
 sinonims = [
-    ['choroidal melanoma' ,'iris melanoma'],
+    ['choroidal melanoma' ,'iris melanoma','Intraocular melanoma'],
     ['DLM Leptomeningeal melanomatosis'],
     ['B-K mole syndrome',
     'FAMM-PC syndrome',
