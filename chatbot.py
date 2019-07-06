@@ -15,6 +15,10 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from textblob import TextBlob
 
+
+import pandas as pd
+
+
 # ******************************************************************
 # GREETINGS
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
@@ -66,7 +70,7 @@ def treatInput(sentence):
     words = word_tokenize(sentence)
     pairs = pos_tag(words)
     result = [lemmatize(p) for p in pairs]
-    result = extractSintagma(result)
+  #  result = extractSintagma(result)
     return result
 
 # ******************************************************************
@@ -135,14 +139,17 @@ types_melanomes = [el.lower() for el in tipus] + [item.lower() for sublist in si
 # ******************************************************************
 import geocoder
 
+R = 6371000
+
 def radians(c):
     return pi/180 * c
 
-def distancia(acte, bici):
-    lat1 = radians(float(acte[0]))
-    long1 = radians(float(acte[1]))
-    lat2 = radians(float(bici[0]))
-    long2 = radians(float(bici[1]))
+#distance in meters
+def distancia(hospital, persona):
+    lat1 = radians(float(hospital[0]))
+    long1 = radians(float(hospital[1]))
+    lat2 = radians(float(persona[0]))
+    long2 = radians(float(persona[1]))
     lat = abs(lat2-lat1)
     long = abs(long2-long1)
     a = sin(lat/2)**2+cos(lat1)*cos(lat2)*sin(long/2)**2
@@ -178,7 +185,22 @@ def responde(bot, update, user_data):
 
     elif greeting(user_response) is not None:   #when greetings appear
         bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response)+ " " + update.message.chat.first_name)
-        bot.send_message(chat_id = update.message.chat_id, text = tr2other("Before starting, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"))
+
+
+    elif 'diagnosed' not in user_data:
+        if ('no' in words) or ("n't" in words) or ("not" in words):
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Don't worry. In this case we believe you should first go to a certified center to diagnose the exact type of melanoma that you suffer"))
+
+
+            #we need to exit
+
+
+
+        else:
+            user_data['diagnosed'] = True
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other(
+                "Then, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"))
+
 
     elif 'type_disease' not in user_data:
             words = word_tokenize(user_response)
@@ -207,12 +229,34 @@ def responde(bot, update, user_data):
 
     else:
         aux = treatInput(user_response)
-        bot.send_message(chat_id = update.message.chat_id, text=aux)
+        #check if this is a where sentence.
+        if 'where' in aux:
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option."))
+
+        else:
+            bot.send_message(chat_id = update.message.chat_id, text=aux)
 
 
 
+def giveClosestHospital(bot, update, user_data):
+    try:
+        file = pd.read_csv('drugs_labs_biobanks_dataset.csv').values
 
+        for hospital in hospitals
 
+      #  name = "%d.png" % random.randint(1000000, 9999999)
+       # lat, lon = update.message.location.latitude,
+       # update.message.location.longitude
+       # mapa = StaticMap(500, 500)
+       # mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
+       # imatge = mapa.render()
+       # imatge.save(name)
+       # bot.send_photo(chat_id=update.message.chat_id,
+        #               photo=open(name, 'rb'))
+        #os.remove(name)
+
+    except Exception as e:
+        bot.send_message(chat_id=update.message.chat_id,text='Something goes wrong!')
 
 
 
@@ -227,6 +271,7 @@ dispatcher = updater.dispatcher
 
 #handling the call
 dispatcher.add_handler(MessageHandler(Filters.text, responde, pass_user_data=True))
+dispatcher.add_handler(MessageHandler(Filters.location, giveClosestHospital, pass_user_data=True))
 
 #starting the bot
 updater.start_polling()
@@ -238,4 +283,33 @@ updater.start_polling()
 
 
 # -------------------------------------
+"""
+import gensim
+import os
+import collections
+import smart_open
+import random
+
+test_data_dir = '{}'.format(os.sep).join([gensim.__path__[0], 'test', 'test_data'])
+lee_train_file = test_data_dir + os.sep + 'lee_background.cor'
+lee_test_file = test_data_dir + os.sep + 'lee.cor'
+
+def read_corpus(fname, tokens_only=False):
+    with smart_open.smart_open(fname, encoding="iso-8859-1") as f:
+        for i, line in enumerate(f):
+            if tokens_only:
+                yield gensim.utils.simple_preprocess(line)
+            else:
+                # For training data, add tags
+                yield gensim.models.doc2vec.TaggedDocument(gensim.utils.simple_preprocess(line), [i])
+
+train_corpus = list(read_corpus(lee_train_file))
+test_corpus = list(read_corpus(lee_test_file, tokens_only=True))
+
+model = gensim.models.doc2vec.Doc2Vec(vector_size=50, min_count=2, epochs=20)
+model.build_vocab(train_corpus)
+model.train(train_corpus, total_examples=model.corpus_count, epochs=model.epochs)
+
+"""
+
 
