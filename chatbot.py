@@ -110,7 +110,42 @@ def responde(bot, update):
 
 # ******************************************************************
 
+tipus = [
+'Uveal melanoma',
+'Diffuse leptomeningeal melanocytosis',
+'Familial atypical multiple mole melanoma syndrome',
+'Familial melanoma',
+'Malignant melanoma of the mucosa',
+'Melanoma and neural system tumor syndrome',
+'Melanoma of soft tissue',
+'Primary melanoma of the central nervous system'
+]
 
+sinonims = [
+    ['choroidal melanoma' ,'iris melanoma'],
+    ['DLM Leptomeningeal melanomatosis'],
+    ['B-K mole syndrome',
+    'FAMM-PC syndrome',
+    'FAMMM syndrome',
+    'Familial Clark nevus syndrome',
+    'Familial atypical mole syndrome',
+    'Familial atypical multiple mole melanoma-pancreatic carcinoma syndrome',
+    'Familial dysplastic nevus syndrome',
+    'Melanoma-pancreatic cancer syndrome'],
+    ['Dysplastic nevus syndrome hereditary','B-K mole syndrome'],
+    [],
+    ['Melanoma-astrocytoma syndrome'],
+    ['Clear cell sarcoma of the tendons and aponeuroses'],
+    ['Malignant melanoma of meninges','Primary melanoma of the CNS']
+    ]
+
+dic = dict(zip(tipus,sinonims))
+tipus_melanomes = tipus + [item for sublist in sinonims for item in sublist]
+
+
+
+print(dic)
+print(tipus_melanomes)
 
 #load the access token
 TOKEN = open('token.txt').read().strip()
@@ -123,5 +158,8 @@ dispatcher.add_handler(MessageHandler(Filters.text, responde, pass_user_data=Tru
 
 #starting the bot
 updater.start_polling()
+
+
+
 
 
