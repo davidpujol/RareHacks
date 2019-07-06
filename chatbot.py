@@ -15,7 +15,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from textblob import TextBlob
 
-
 import pandas as pd
 
 # ******************************************************************
@@ -146,20 +145,31 @@ print(dic)
 import geocoder
 
 R = 6371000
+pi = 3.14159
 
 def radians(c):
     return pi/180 * c
 
 #distance in meters
 def distancia(hospital, persona):
+    print('dist')
     lat1 = radians(float(hospital[0]))
+    print('a')
     long1 = radians(float(hospital[1]))
+    print('b')
     lat2 = radians(float(persona[0]))
+    print('c')
     long2 = radians(float(persona[1]))
+    print('d')
     lat = abs(lat2-lat1)
-    long = abs(long2-long1)
-    a = sin(lat/2)**2+cos(lat1)*cos(lat2)*sin(long/2)**2
+    print('a')
+    long = abs(long2 - long1)
+    print(type(lat))
+    print(type(long))
+    a = sin(lat/2)**2 + cos(lat1) * cos(lat2) * sin(long/2) ** 2
+    print('c')
     c = 2*atan2(sqrt(a),sqrt(1-a))
+    print('c')
     return R*c
 
 
@@ -260,37 +270,46 @@ def responde(bot, update, user_data):
 
 
 def findClosestHospital(lat, long):
+    print('aadsjflasdf')
     list = []
     for i in range(0, len(information_hospitals)):
         hospital = information_hospitals[i]
+        print(hospital)
         lat2 = hospital[3]
         long2 = hospital[4]
+        print(lat2)
+        print(long2)
+        print(lat)
+        print(long)
         distance = distancia([lat,long],[lat2,long2])
+        print(distance)
         list.append([i,distance])
 
     list = sorted(list, lambda x: x[1])
-    return list[0]
+    print(len(list))
+    return list[-1][0]
 
 
 def giveClosestHospital(bot, update, user_data):
     try:
         name = "%d.png" % random.randint(1000000, 9999999)
-        lat, lon = update.message.location.latitude,
-        update.message.location.longitude
-
+        lat = str(update.message.location.latitude)[1:-1]
+        lon = str(update.message.location.longitude)[1:-1]
+        print('a')
         index = findClosestHospital(lat,lon)
-        entry = information_hospitals[index]
-        lat = entry[3]
-        lon = entry[4]
+        #entry = information_hospitals[index]
+        #lat = entry[3]
+        #lon = entry[4]
 
-        mapa = StaticMap(500, 500)
-        mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
-        imatge = mapa.render()
-        imatge.save(name)
-        bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
+        #mapa = StaticMap(500, 500)
+        #mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
+        #imatge = mapa.render()
+        #imatge.save(name)
+        #bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
         #os.remove(name)
 
     except Exception as e:
+        print(e)
         bot.send_message(chat_id=update.message.chat_id,text='Something goes wrong!')
 
 
