@@ -85,31 +85,12 @@ def tr2other(text):
     msg_tr = translator.translate(text, dest=str(language)).text
     return msg_tr
 
+
+
+
+
 # ******************************************************************
 #DICTIONARY OF TYPES OF MELANOMA
-
-
-def radians(c):
-    return pi/180 * c
-
-def distancia(acte, bici):
-    lat1 = radians(float(acte.lat))
-    long1 = radians(float(acte.long))
-    lat2 = radians(float(bici.lat))
-    long2 = radians(float(bici.long))
-    lat = abs(lat2-lat1)
-    long = abs(long2-long1)
-    a = sin(lat/2)**2+cos(lat1)*cos(lat2)*sin(long/2)**2
-    c = 2*atan2(sqrt(a),sqrt(1-a))
-    return R*c
-
-
-
-
-
-
-# *********************************************************************
-
 
 tipus = [
 'Uveal melanoma',
@@ -152,7 +133,32 @@ types_melanomes = [el.lower() for el in tipus] + [item.lower() for sublist in si
 
 
 # ******************************************************************
-#GET
+import geocoder
+
+def radians(c):
+    return pi/180 * c
+
+def distancia(acte, bici):
+    lat1 = radians(float(acte[0]))
+    long1 = radians(float(acte[1]))
+    lat2 = radians(float(bici[0]))
+    long2 = radians(float(bici[1]))
+    lat = abs(lat2-lat1)
+    long = abs(long2-long1)
+    a = sin(lat/2)**2+cos(lat1)*cos(lat2)*sin(long/2)**2
+    c = 2*atan2(sqrt(a),sqrt(1-a))
+    return R*c
+
+
+def getLatLong (address):
+    g = geocoder.mapquest(address, key='SBCjXsQ99VWjbfwSFYh1UDv3QhzYfyGj')
+    lat = g.lat
+    long = g.long
+    return [lat,long]
+
+
+# *********************************************************************
+
 
 
 
@@ -206,7 +212,7 @@ def responde(bot, update, user_data):
 
 
 
-SBCjXsQ99VWjbfwSFYh1UDv3QhzYfyGj
+
 
 
 
