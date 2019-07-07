@@ -88,13 +88,13 @@ def readCSV(name):
     global information_hospitals
     information_hospitals = []
 
-    print(name)
     index = names.index(str(name))+1
-    print(str(index))
+   # user_data['index'] = index
+
     name_file = 'csv/drugs_labs_biobanks_dataset -' + str(index) + '.csv'
-    print('b')
+
     rows = pd.read_csv(str(name_file)).values
-    print('a')
+
     for row in rows:
         name = row[4]
         telefon = row[5]
@@ -161,24 +161,23 @@ def responde(bot, update, user_data):
         words = " ".join(words)
         print(words)
         prediction = predictAnswer(words)
-      #  prediction[0] = prediction[0].upper()
 
-        if words[0] == '$' or ('where' in words):
+        if '$' in prediction:
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option.", user_data['language']))
 
-        if words[0] == 'is':
+        elif words[0] == 'is':
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, it is"))
 
-        if words[0] == 'should':
+        elif words[0] == 'should':
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, you should"))
 
-        if words[0] == 'would':
+        elif words[0] == 'would':
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, I would"))
 
-        if words[0] == 'does':
+        elif words[0] == 'does':
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, it does"))
 
-        if words[0] == 'do':
+        elif words[0] == 'do':
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, you do"))
 
         else:
