@@ -1,86 +1,238 @@
-The drug used to treat intraocular melanoma is Aldesleukin.
-
-Medicine prescribed for intraocular melanoma is Aldesleukin.
-
-The drug used to treat intraocular melanoma is Interleukin - 2.
-
-Medicine prescribed for intraocular melanoma is Interleukin - 2.
-
+The drug used to treat Uveal melanoma is Aldesleukin.
+Medicine prescribed for Uveal melanoma is Aldesleukin.
+The drug used to treat Uveal melanoma is Interleukin - 2.
+Medicine prescribed for Uveal melanoma is Interleukin - 2.
 The  brand name for Aldesleukin is Proleukin.
-
 The drug Aldesleukin is sold as Proleukin.
-
 The  brand name for Interleukin - 2 is Proleukin.
-
 The drug Interleukin - 2 is sold as Proleukin.
-
 The side effects of the treatment are: Nausea, Vomiting, Diarrhea, Loss of appetite, Sores in the mouth and thorat, Tiredness, Weakness, Dizziness, Unwell feelin, Pain at the place where the injection was given, Chest pain.
-
 This treatment can cause: Nausea, Vomiting, Diarrhea, Loss of appetite, Sores in the mouth and thorat, Tiredness, Weakness, Dizziness, Unwell feelin, Pain at the place where the injection was given, Chest pain.
-
 If you have one of these side effects, you must go to your medical center: Chest pain, Seizures, Extreme worry, abnormal excitement or agitation, new or worsening depression, seeing things or hearing voices that do not exist (hallucinating), changes in your vision or speech, loss of coordination, decreased alertness, unusual bruising or bleeding, extreme sleepiness or tiredness, difficulty breathing, wheezing, stomach pain, yellowing of the skin or eyes, decreased urination, rash, hives, itching, difficulty breathing or swallowing.
-
 The following side effects are dangerous, please contact with your doctor: Chest pain, Seizures, Extreme worry, abnormal excitement or agitation, new or worsening depression, seeing things or hearing voices that do not exist (hallucinating), changes in your vision or speech, loss of coordination, decreased alertness, unusual bruising or bleeding, extreme sleepiness or tiredness, difficulty breathing, wheezing, stomach pain, yellowing of the skin or eyes, decreased urination, rash, hives, itching, difficulty breathing or swallowing.
-
 The genetic tests for this illness are: Array based techniques, Sanguer sequencing, MLPA based techniques, FISH, Karyotyping, NGS sequencing (except WES), Microsatellite analysis.
-
 Array based techniques, Sanguer sequencing, MLPA based techniques, FISH, Karyotyping, NGS sequencing (except WES), Microsatellite analysis can be used for doing diagnose.
-
 You can put in contact with other patients in the following organisations: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
-
 The following networks are people like you: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
-
 This link https://melanomafocus.com corresponds to this organization: United Kingdom, Melanoma Focus.
-
 This link https://www.clicsargent.org.uk corresponds to this organization: United Kingdom, CLIC Sargent.
-
 This link https://www.teenagecancertrust.org corresponds to this organization: United Kingdom, Teenage Camcer trust.
-
 This link https://melanomafocus.com corresponds to this organization: Australia, RCA Rare Cancers Australia limited.
-
 This link https://www.cancer.be corresponds to this organization: Belgium, Fondation contre le Cancer, Fondation d'utilité publique.
-
 This link http://www.enaoniromiaefxi.com/enaoniromiaefxi/ corresponds to this organization: Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish".
-
 This link https://pasykaf.org corresponds to this organization: Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends.
-
 This link http://www.source-vive.org/asso.html corresponds to this organization: France, Association Source Vive.
-
 This link https://www.ligue-cancer.net corresponds to this organization: France, La Ligue Contre le Cancer.
-
 This link http://www.iodomani.it corresponds to this organization: Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili.
-
 This link https://www.kriibskrankkanner.lu corresponds to this organization: Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer.
-
 This link https://koliber-dzieciom.pl corresponds to this organization: Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa.
-
 This link http://www.krwinka.org corresponds to this organization: Poland, Fundacja "Krwinka".
-
 This link https://cancerinfantil.org corresponds to this organization: Spain, Federación Española de Padres de Niños con Cáncer.
-
 This link http://www.zvoncica.org.rs corresponds to this organization: Serbia, ZVONCICA - Childhood cancer parent organisation.
-
 The most common age of onset could be: Adult.
-
 The first signs appear in Adult age.
-
-The prevalence of intraocular melanoma in Europe is 1-9 / 1 000 000.
-
+The prevalence of Uveal melanoma in Europe is 1-9 / 1 000 000.
 The illness can be caused by a mutation in cysteinyl leukotriene receptor 2 (CYSLTR2), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing somatic mutation(s) in.
-
 The illness can be caused by a mutation in BRCA1 associated protein 1 (BAP1), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing germline mutation(s) in.
-
 The illness can be caused by a mutation in G protein subunit alpha q (GNAQ), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing somatic mutation(s) in.
-
 The illness can be caused by a mutation in G protein subunit alpha 11 (GNA11), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing somatic mutation(s) in.
-
 The illness can be caused by a mutation in splicing factor 3b subunit 1 (SF3B1), you can find more information visiting https://www.uniprot.org/ using this reference: Biomarker tested in.
-
-Very frequent (99-80%) symptoms for intraocular melanoma are: Visual loss, Abnormal fundus morphology, Choroidal melanoma.
-
-Frequent (79-30%) symptoms for intraocular melanoma are: Retinal detachment, Iris melanoma, Ciliary body melanoma.
-
-Occasional (29-5%) symptoms for intraocular melanoma are: Abnormality of refraction, Vitreous hemorrhage, Ocular hypertension, Inferior lens subluxation, Zonular cataract, Mydriasis, Metamorphopsia, Photopsia, Abnormal visual accommodation.
-
-Very rare (<4-1%) symptoms for intraocular melanoma are: Inflammatory abnormality of the eye, Ocular pain.
-
+Very frequent (99-80%) symptoms for Uveal melanoma are: Visual loss, Abnormal fundus morphology, Choroidal melanoma.
+Frequent (79-30%) symptoms for Uveal melanoma are: Retinal detachment, Iris melanoma, Ciliary body melanoma.
+Occasional (29-5%) symptoms for Uveal melanoma are: Abnormality of refraction, Vitreous hemorrhage, Ocular hypertension, Inferior lens subluxation, Zonular cataract, Mydriasis, Metamorphopsia, Photopsia, Abnormal visual accommodation.
+Very rare (<4-1%) symptoms for Uveal melanoma are: Inflammatory abnormality of the eye, Ocular pain.
+The drug used to treat Primary melanoma of the central nervous system is  Ipilimumab.
+Medicine prescribed for Primary melanoma of the central nervous system is  Ipilimumab.
+The drug used to treat Primary melanoma of the central nervous system is MDX-010.
+Medicine prescribed for Primary melanoma of the central nervous system is MDX-010.
+The  brand name for  Ipilimumab is Yervoy.
+The drug  Ipilimumab is sold as Yervoy.
+The  brand name for MDX-010 is Yervoy.
+The drug MDX-010 is sold as Yervoy.
+The side effects of the treatment are: Blood and lymphatic system disorders (674), Cardiac disorders (563), Congenital, familial and genetic disorders (9), Ear and labyrinth disorders (86), Endocrine disorders (1809), Eye disorders (484), Gastrointestinal disorders (4880), General disorders and administration site conditions (4510), Hepatobiliary disorders (1205), Immune system disorders (261), Infections and infestations (1505), Injury, poisoning and procedural complications (1725), Investigations (1612), Metabolism and nutrition disorders (1384), Musculoskeletal and connective tissue disorders (996), Neoplasms benign, malignant and unspecified (incl cysts and polyps) (2396), Nervous system disorders (1662), Pregnancy, puerperium and perinatal conditions (11), Product issues (8), Psychiatric disorders (376), Renal and urinary disorders (642), Reproductive system and breast disorders (50), Respiratory, thoracic and mediastinal disorders (1436), Skin and subcutaneous tissue disorders (1940), Social circumstances (9), Surgical and medical procedures (229), Vascular disorders (558).
+This treatment can cause: Blood and lymphatic system disorders (674), Cardiac disorders (563), Congenital, familial and genetic disorders (9), Ear and labyrinth disorders (86), Endocrine disorders (1809), Eye disorders (484), Gastrointestinal disorders (4880), General disorders and administration site conditions (4510), Hepatobiliary disorders (1205), Immune system disorders (261), Infections and infestations (1505), Injury, poisoning and procedural complications (1725), Investigations (1612), Metabolism and nutrition disorders (1384), Musculoskeletal and connective tissue disorders (996), Neoplasms benign, malignant and unspecified (incl cysts and polyps) (2396), Nervous system disorders (1662), Pregnancy, puerperium and perinatal conditions (11), Product issues (8), Psychiatric disorders (376), Renal and urinary disorders (642), Reproductive system and breast disorders (50), Respiratory, thoracic and mediastinal disorders (1436), Skin and subcutaneous tissue disorders (1940), Social circumstances (9), Surgical and medical procedures (229), Vascular disorders (558).
+If you have one of these side effects, you must go to your medical center: intestinal problems (colitis), liver problems (hepatitis), skin problems, nerve problems, hormone gland problems (especially the pituitary, adrenal, and thyroid glands), lung problems (pneumonitis), kidney problems, including nephritis and kidney failure, inflammation of the brain (encephalitis), eye problems.
+The following side effects are dangerous, please contact with your doctor: intestinal problems (colitis), liver problems (hepatitis), skin problems, nerve problems, hormone gland problems (especially the pituitary, adrenal, and thyroid glands), lung problems (pneumonitis), kidney problems, including nephritis and kidney failure, inflammation of the brain (encephalitis), eye problems.
+The genetic tests for this illness are: .
+ can be used for doing diagnose.
+You can put in contact with other patients in the following organisations: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+The following networks are people like you: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+This link https://melanomafocus.com corresponds to this organization: United Kingdom, Melanoma Focus.
+This link https://www.clicsargent.org.uk corresponds to this organization: United Kingdom, CLIC Sargent.
+This link https://www.teenagecancertrust.org corresponds to this organization: United Kingdom, Teenage Camcer trust.
+This link https://melanomafocus.com corresponds to this organization: Australia, RCA Rare Cancers Australia limited.
+This link https://www.cancer.be corresponds to this organization: Belgium, Fondation contre le Cancer, Fondation d'utilité publique.
+This link http://www.enaoniromiaefxi.com/enaoniromiaefxi/ corresponds to this organization: Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish".
+This link https://pasykaf.org corresponds to this organization: Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends.
+This link http://www.source-vive.org/asso.html corresponds to this organization: France, Association Source Vive.
+This link https://www.ligue-cancer.net corresponds to this organization: France, La Ligue Contre le Cancer.
+This link http://www.iodomani.it corresponds to this organization: Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili.
+This link https://www.kriibskrankkanner.lu corresponds to this organization: Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer.
+This link https://koliber-dzieciom.pl corresponds to this organization: Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa.
+This link http://www.krwinka.org corresponds to this organization: Poland, Fundacja "Krwinka".
+This link https://cancerinfantil.org corresponds to this organization: Spain, Federación Española de Padres de Niños con Cáncer.
+This link http://www.zvoncica.org.rs corresponds to this organization: Serbia, ZVONCICA - Childhood cancer parent organisation.
+The illness can be caused by a mutation in cysteinyl leukotriene receptor 2 (CYSLTR2), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing somatic mutation(s) in.
+The illness can be caused by a mutation in BRCA1 associated protein 1 (BAP1), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing germline mutation(s) in.
+The illness can be caused by a mutation in G protein subunit alpha q (GNAQ), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing somatic mutation(s) in.
+The illness can be caused by a mutation in G protein subunit alpha 11 (GNA11), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing somatic mutation(s) in.
+The illness can be caused by a mutation in splicing factor 3b subunit 1 (SF3B1), you can find more information visiting https://www.uniprot.org/ using this reference: Biomarker tested in.
+ symptoms for Primary melanoma of the central nervous system are: None typical symptoms described consensually but intracranial hypertension, hydrocephalus, neurologic deficits secondary to nerve compression, intracranial hemorrhage, and seizure activity have been observed, Radiological exam required.
+The drug used to treat Melanoma of soft tissue is Pazopanib hydrochloride.
+Medicine prescribed for Melanoma of soft tissue is Pazopanib hydrochloride.
+The  brand name for Pazopanib hydrochloride is VOTRIENT.
+The drug Pazopanib hydrochloride is sold as VOTRIENT.
+The side effects of the treatment are: Diarrhoea, Skin rash, Tiredness , Change in hair colour, hypertension, Loss of appetite, Weight loss, Headaches, Liver changes, Sore mouth, Loss of skin colour, Soreness, Tummy pain.
+This treatment can cause: Diarrhoea, Skin rash, Tiredness , Change in hair colour, hypertension, Loss of appetite, Weight loss, Headaches, Liver changes, Sore mouth, Loss of skin colour, Soreness, Tummy pain.
+If you have one of these side effects, you must go to your medical center: heart problems, stroke, changes to your periods, runny nose, skin sensitivity to sunlight.
+The following side effects are dangerous, please contact with your doctor: heart problems, stroke, changes to your periods, runny nose, skin sensitivity to sunlight.
+The genetic tests for this illness are: PCR based techniques, FISH, NGS techniques.
+PCR based techniques, FISH, NGS techniques can be used for doing diagnose.
+You can put in contact with other patients in the following organisations: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+The following networks are people like you: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+This link https://melanomafocus.com corresponds to this organization: United Kingdom, Melanoma Focus.
+This link https://www.clicsargent.org.uk corresponds to this organization: United Kingdom, CLIC Sargent.
+This link https://www.teenagecancertrust.org corresponds to this organization: United Kingdom, Teenage Camcer trust.
+This link https://melanomafocus.com corresponds to this organization: Australia, RCA Rare Cancers Australia limited.
+This link https://www.cancer.be corresponds to this organization: Belgium, Fondation contre le Cancer, Fondation d'utilité publique.
+This link http://www.enaoniromiaefxi.com/enaoniromiaefxi/ corresponds to this organization: Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish".
+This link https://pasykaf.org corresponds to this organization: Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends.
+This link http://www.source-vive.org/asso.html corresponds to this organization: France, Association Source Vive.
+This link https://www.ligue-cancer.net corresponds to this organization: France, La Ligue Contre le Cancer.
+This link http://www.iodomani.it corresponds to this organization: Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili.
+This link https://www.kriibskrankkanner.lu corresponds to this organization: Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer.
+This link https://koliber-dzieciom.pl corresponds to this organization: Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa.
+This link http://www.krwinka.org corresponds to this organization: Poland, Fundacja "Krwinka".
+This link https://cancerinfantil.org corresponds to this organization: Spain, Federación Española de Padres de Niños con Cáncer.
+This link http://www.zvoncica.org.rs corresponds to this organization: Serbia, ZVONCICA - Childhood cancer parent organisation.
+The most common age of onset could be: Adult.
+The first signs appear in Adult age.
+The illness can be caused by a mutation in EWS RNA binding protein 1 (EWSR1), you can find more information visiting https://www.uniprot.org/ using this reference: Part of a fusion gene in.
+The illness can be caused by a mutation in activating transcription factor 1 (ATF1), you can find more information visiting https://www.uniprot.org/ using this reference: Part of a fusion gene in.
+The illness can be caused by a mutation in cAMP responsive element binding protein 1 (CREB1), you can find more information visiting https://www.uniprot.org/ using this reference: Part of a fusion gene in.
+ symptoms for Melanoma of soft tissue are: Lump or mass, Uncomfortable swelling, Limited mobility, Skin lesions.
+No medical treatment known
+There is no consensuate for treating this illness, go to your medical center
+The genetic tests for this illness are: FISH.
+FISH can be used for doing diagnose.
+You can put in contact with other patients in the following organisations: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+The following networks are people like you: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+This link https://melanomafocus.com corresponds to this organization: United Kingdom, Melanoma Focus.
+This link https://www.clicsargent.org.uk corresponds to this organization: United Kingdom, CLIC Sargent.
+This link https://www.teenagecancertrust.org corresponds to this organization: United Kingdom, Teenage Camcer trust.
+This link https://melanomafocus.com corresponds to this organization: Australia, RCA Rare Cancers Australia limited.
+This link https://www.cancer.be corresponds to this organization: Belgium, Fondation contre le Cancer, Fondation d'utilité publique.
+This link http://www.enaoniromiaefxi.com/enaoniromiaefxi/ corresponds to this organization: Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish".
+This link https://pasykaf.org corresponds to this organization: Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends.
+This link http://www.source-vive.org/asso.html corresponds to this organization: France, Association Source Vive.
+This link https://www.ligue-cancer.net corresponds to this organization: France, La Ligue Contre le Cancer.
+This link http://www.iodomani.it corresponds to this organization: Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili.
+This link https://www.kriibskrankkanner.lu corresponds to this organization: Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer.
+This link https://koliber-dzieciom.pl corresponds to this organization: Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa.
+This link http://www.krwinka.org corresponds to this organization: Poland, Fundacja "Krwinka".
+This link https://cancerinfantil.org corresponds to this organization: Spain, Federación Española de Padres de Niños con Cáncer.
+This link http://www.zvoncica.org.rs corresponds to this organization: Serbia, ZVONCICA - Childhood cancer parent organisation.
+The illness can be caused by a mutation in EWS RNA binding protein 1 (EWSR1), you can find more information visiting https://www.uniprot.org/ using this reference: Part of a fusion gene in.
+The illness can be caused by a mutation in activating transcription factor 1 (ATF1), you can find more information visiting https://www.uniprot.org/ using this reference: Part of a fusion gene in.
+The illness can be caused by a mutation in cAMP responsive element binding protein 1 (CREB1), you can find more information visiting https://www.uniprot.org/ using this reference: Part of a fusion gene in.
+ symptoms for Diffuse leptomeningeal melanocytosis are: Vomiting, Headache, Neurologic symptoms.
+The drug used to treat Melanoma and neural system tumor syndrome is Aldeleukin.
+Medicine prescribed for Melanoma and neural system tumor syndrome is Aldeleukin.
+The  brand name for Aldeleukin is Proleukin.
+The drug Aldeleukin is sold as Proleukin.
+The side effects of the treatment are: Nausea, Vomiting, Diarrhea, Loss of appetite, Sores in the mouth and thorat, Tiredness, Weakness, Dizziness, Unwell feelin, Pain at the place where the injection was given, Chest pain.
+This treatment can cause: Nausea, Vomiting, Diarrhea, Loss of appetite, Sores in the mouth and thorat, Tiredness, Weakness, Dizziness, Unwell feelin, Pain at the place where the injection was given, Chest pain.
+If you have one of these side effects, you must go to your medical center: Chest pain, Seizures, Extreme worry, abnormal excitement or agitation, new or worsening depression, seeing things or hearing voices that do not exist (hallucinating), changes in your vision or speech, loss of coordination, decreased alertness, unusual bruising or bleeding, extreme sleepiness or tiredness, difficulty breathing, wheezing, stomach pain, yellowing of the skin or eyes, decreased urination, rash, hives, itching, difficulty breathing or swallowing.
+The following side effects are dangerous, please contact with your doctor: Chest pain, Seizures, Extreme worry, abnormal excitement or agitation, new or worsening depression, seeing things or hearing voices that do not exist (hallucinating), changes in your vision or speech, loss of coordination, decreased alertness, unusual bruising or bleeding, extreme sleepiness or tiredness, difficulty breathing, wheezing, stomach pain, yellowing of the skin or eyes, decreased urination, rash, hives, itching, difficulty breathing or swallowing.
+The genetic tests for this illness are: NGS sequencing , Sanger sequencing, PCR based techniques, MLPA based techniques, Microsatellite analysis.
+NGS sequencing , Sanger sequencing, PCR based techniques, MLPA based techniques, Microsatellite analysis can be used for doing diagnose.
+You can put in contact with other patients in the following organisations: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+The following networks are people like you: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+This link https://melanomafocus.com corresponds to this organization: United Kingdom, Melanoma Focus.
+This link https://www.clicsargent.org.uk corresponds to this organization: United Kingdom, CLIC Sargent.
+This link https://www.teenagecancertrust.org corresponds to this organization: United Kingdom, Teenage Camcer trust.
+This link https://melanomafocus.com corresponds to this organization: Australia, RCA Rare Cancers Australia limited.
+This link https://www.cancer.be corresponds to this organization: Belgium, Fondation contre le Cancer, Fondation d'utilité publique.
+This link http://www.enaoniromiaefxi.com/enaoniromiaefxi/ corresponds to this organization: Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish".
+This link https://pasykaf.org corresponds to this organization: Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends.
+This link http://www.source-vive.org/asso.html corresponds to this organization: France, Association Source Vive.
+This link https://www.ligue-cancer.net corresponds to this organization: France, La Ligue Contre le Cancer.
+This link http://www.iodomani.it corresponds to this organization: Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili.
+This link https://www.kriibskrankkanner.lu corresponds to this organization: Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer.
+This link https://koliber-dzieciom.pl corresponds to this organization: Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa.
+This link http://www.krwinka.org corresponds to this organization: Poland, Fundacja "Krwinka".
+This link https://cancerinfantil.org corresponds to this organization: Spain, Federación Española de Padres de Niños con Cáncer.
+This link http://www.zvoncica.org.rs corresponds to this organization: Serbia, ZVONCICA - Childhood cancer parent organisation.
+The most common age of onset could be: Adult, Elderly.
+The first signs appear in Adult, Elderly age.
+The illness can be caused by a mutation in cyclin dependent kinase inhibitor 2A (CDKN2A), you can find more information visiting https://www.uniprot.org/ using this reference: Candidate gene tested in.
+ symptoms for Melanoma and neural system tumor syndrome are: cutaneous malignant melanoma, cerebral astrocytoma.
+The drug used to treat Familial atypical multiple mole melanoma syndrome is interferon-α2b.
+Medicine prescribed for Familial atypical multiple mole melanoma syndrome is interferon-α2b.
+The  brand name for interferon-α2b is Intron A.
+The drug interferon-α2b is sold as Intron A.
+The side effects of the treatment are: bruising, bleeding, pain, redness, swelling, or irritation in the place you injected interferon alfa-2b, muscle pain, change in ability to taste, hair loss, dizziness, dry mouth, concentration problems, feeling cold or hot, weight changes, skin changes.
+This treatment can cause: bruising, bleeding, pain, redness, swelling, or irritation in the place you injected interferon alfa-2b, muscle pain, change in ability to taste, hair loss, dizziness, dry mouth, concentration problems, feeling cold or hot, weight changes, skin changes.
+If you have one of these side effects, you must go to your medical center: rash, hives, skin peeling, itching, difficulty breathing or swallowing, swelling of the eyes, face, mouth, tongue, or throat, changes in vision, stomach pain, tenderness or swelling, yellowing of the skin or eyes, extreme tiredness, confusion, diarrhea, loss of appetite, nausea, vomiting, back pain, loss of consciousness, numbness, burning or tingling in the hands or feet.
+The following side effects are dangerous, please contact with your doctor: rash, hives, skin peeling, itching, difficulty breathing or swallowing, swelling of the eyes, face, mouth, tongue, or throat, changes in vision, stomach pain, tenderness or swelling, yellowing of the skin or eyes, extreme tiredness, confusion, diarrhea, loss of appetite, nausea, vomiting, back pain, loss of consciousness, numbness, burning or tingling in the hands or feet.
+The genetic tests for this illness are: Sanger sequencing, MLPA based techniques, PCR based technique, Microsatellite analysis, Whole Exome Sequencing (WES), Array based techniques, Molecular genetics, Mutation scanning, Targeted mutation analysis.
+Sanger sequencing, MLPA based techniques, PCR based technique, Microsatellite analysis, Whole Exome Sequencing (WES), Array based techniques, Molecular genetics, Mutation scanning, Targeted mutation analysis can be used for doing diagnose.
+You can put in contact with other patients in the following organisations: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+The following networks are people like you: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+This link https://melanomafocus.com corresponds to this organization: United Kingdom, Melanoma Focus.
+This link https://www.clicsargent.org.uk corresponds to this organization: United Kingdom, CLIC Sargent.
+This link https://www.teenagecancertrust.org corresponds to this organization: United Kingdom, Teenage Camcer trust.
+This link https://melanomafocus.com corresponds to this organization: Australia, RCA Rare Cancers Australia limited.
+This link https://www.cancer.be corresponds to this organization: Belgium, Fondation contre le Cancer, Fondation d'utilité publique.
+This link http://www.enaoniromiaefxi.com/enaoniromiaefxi/ corresponds to this organization: Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish".
+This link https://pasykaf.org corresponds to this organization: Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends.
+This link http://www.source-vive.org/asso.html corresponds to this organization: France, Association Source Vive.
+This link https://www.ligue-cancer.net corresponds to this organization: France, La Ligue Contre le Cancer.
+This link http://www.iodomani.it corresponds to this organization: Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili.
+This link https://www.kriibskrankkanner.lu corresponds to this organization: Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer.
+This link https://koliber-dzieciom.pl corresponds to this organization: Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa.
+This link http://www.krwinka.org corresponds to this organization: Poland, Fundacja "Krwinka".
+This link https://cancerinfantil.org corresponds to this organization: Spain, Federación Española de Padres de Niños con Cáncer.
+This link http://www.zvoncica.org.rs corresponds to this organization: Serbia, ZVONCICA - Childhood cancer parent organisation.
+The most common age of onset could be: Adolescent, Adult, Childhood.
+The first signs appear in Adolescent, Adult, Childhood age.
+The illness can be caused by a mutation in cyclin dependent kinase inhibitor 2A (CDKN2A), you can find more information visiting https://www.uniprot.org/ using this reference: Disease-causing germline mutation(s) in.
+ symptoms for Familial atypical multiple mole melanoma syndrome are: Cutaneous neurofibromas , Neurofibromatosis type 1.
+No medical treatment known
+There is no consensuate for treating this illness, go to your medical center
+The genetic tests for this illness are: MLPA based techniques, Sanger sequencing, PCR based techniques, FISH, Whole Exome Sequencing (WES), Molecular genetics.
+MLPA based techniques, Sanger sequencing, PCR based techniques, FISH, Whole Exome Sequencing (WES), Molecular genetics can be used for doing diagnose.
+You can put in contact with other patients in the following organisations: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+The following networks are people like you: United Kingdom, Melanoma Focus,United Kingdom, CLIC Sargent,United Kingdom, Teenage Camcer trust,Australia, RCA Rare Cancers Australia limited,Belgium, Fondation contre le Cancer, Fondation d'utilité publique,Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish",Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends,France, Association Source Vive,France, La Ligue Contre le Cancer,Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili,Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer,Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa,Poland, Fundacja "Krwinka",Spain, Federación Española de Padres de Niños con Cáncer,Serbia, ZVONCICA - Childhood cancer parent organisation.
+This link https://melanomafocus.com corresponds to this organization: United Kingdom, Melanoma Focus.
+This link https://www.clicsargent.org.uk corresponds to this organization: United Kingdom, CLIC Sargent.
+This link https://www.teenagecancertrust.org corresponds to this organization: United Kingdom, Teenage Camcer trust.
+This link https://melanomafocus.com corresponds to this organization: Australia, RCA Rare Cancers Australia limited.
+This link https://www.cancer.be corresponds to this organization: Belgium, Fondation contre le Cancer, Fondation d'utilité publique.
+This link http://www.enaoniromiaefxi.com/enaoniromiaefxi/ corresponds to this organization: Cyprus, Cyprus Association for Children with Cancer and Related Diseases "One Dream One Wish".
+This link https://pasykaf.org corresponds to this organization: Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends.
+This link http://www.source-vive.org/asso.html corresponds to this organization: France, Association Source Vive.
+This link https://www.ligue-cancer.net corresponds to this organization: France, La Ligue Contre le Cancer.
+This link http://www.iodomani.it corresponds to this organization: Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili.
+This link https://www.kriibskrankkanner.lu corresponds to this organization: Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer.
+This link https://koliber-dzieciom.pl corresponds to this organization: Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa.
+This link http://www.krwinka.org corresponds to this organization: Poland, Fundacja "Krwinka".
+This link https://cancerinfantil.org corresponds to this organization: Spain, Federación Española de Padres de Niños con Cáncer.
+This link http://www.zvoncica.org.rs corresponds to this organization: Serbia, ZVONCICA - Childhood cancer parent organisation.
+The most common age of onset could be: Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult.
+The first signs appear in Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult, Adult age.
+The prevalence of Familial melanoma in Europe is 1-9 / 100 000.
+The illness can be caused by a mutation in cyclin dependent kinase 4 (CDK4), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in cyclin dependent kinase inhibitor 2A (CDKN2A), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in melanocyte inducing transcription factor (MITF), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in telomerase reverse transcriptase (TERT), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in melanocortin 1 receptor (MC1R), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in BRCA1 associated protein 1 (BAP1), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in cyclin dependent kinase inhibitor 2B (CDKN2B), you can find more information visiting https://www.uniprot.org/ using this reference: Candidate gene tested in.
+The illness can be caused by a mutation in O-6-methylguanine-DNA methyltransferase (MGMT), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in protection of telomeres 1 (POT1), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in ACD shelterin complex subunit and telomerase recruitment factor (ACD), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+The illness can be caused by a mutation in TERF2 interacting protein (TERF2IP), you can find more information visiting https://www.uniprot.org/ using this reference: Major susceptibility factor in.
+Occasional (29-5%) symptoms for Familial melanoma are: Retinopathy, Abnormality of extrapyramidal motor function, Neoplasm of the pancreas, Neoplasm of the stomach, Neoplasm of the breast.
+Frequent (79-30%) symptoms for Familial melanoma are: Dry skin, Freckling, Abnormality of the hair, Abnormality of the lymphatic system.
+Very frequent (99-80%) symptoms for Familial melanoma are: Melanoma, Nevus.
