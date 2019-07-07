@@ -126,7 +126,7 @@ def symptoms(dic):
     #list = [veryfrequent,[l]]
     slist = []
     for (k,v) in dic.items():
-        s = k+" symptoms for "+ melanoma +"are: "+", ".join(v)+"."
+        s = k+" symptoms for "+ melanoma +" are: "+", ".join(v)+"."
         slist.append(s)
     return slist
 
