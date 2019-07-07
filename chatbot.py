@@ -201,7 +201,6 @@ def findClosestHospital(lat, long):
 
 def giveClosestHospital(bot, update, user_data):
     try:
-        name = "%d.png" % random.randint(1000000, 9999999)
         lat = str(update.message.location.latitude)
         lon = str(update.message.location.longitude)
         index = findClosestHospital(lat,lon)
@@ -216,7 +215,6 @@ def giveClosestHospital(bot, update, user_data):
 
         text = "This is the location of the nearest hospital in which your type of disease can be treated.\nThis hospital is called " + nom + " and its address is " + address + "\n" + "I would recommend you to contact it through the telefon " + telefon + " so you can book a meet with an specialist."
         bot.send_message(chat_id=update.message.chat_id, text=tr2other(text,user_data['language']))
-        os.remove(name)
 
 
     except Exception as e:
