@@ -1,0 +1,75 @@
+Medical name,Brand Name,Drugs side Effects,Dangerous Side effects,Expert Centres,Contact Expert Centres,Contact II Expert Centres,Latitude,Longitude,Genetic Counseling,Contact Genetic C,Contact II Genetic C,Latitude_2,Longitude_2,Diagnostic test,Patient Organisation (PO),PO Link,Age of onset,Prevalence in Europe,Genes,Gene symbol,Type of mutation,UniProtKB,Symptoms and signs,Freq symp
+Aldesleukin,Proleukin,Nausea,Chest pain,LUMC - Leids Universitair Medisch Centrum, +31 (0)715269111,Albinusdreef 2333 ZA LEIDEN,"52,17","4,48",LUMC - Leids Universitair Medisch Centrum, +31 (0)71 526 911,Albinusdreef 22333 ZA LEIDEN,,,Array based techniques,"United Kingdom, Melanoma Focus",https://melanomafocus.com,Adult,1-9 / 1 000 000,cysteinyl leukotriene receptor 2,CYSLTR2,Disease-causing somatic mutation(s) in,Q9NS75,Visual loss,Very frequent (99-80%)
+Interleukin - 2,,Vomiting,Seizures,Erasmus MC - Erasmus Medisch Centrum, +31 (0)10 704 0704,s-Gravendijkwal 230 3015 CE ROTTERDAM,"51,91","4,46",Erasmus MC - Erasmus Medisch Centrum, +31 (0)10 704 0704,Gravendijkwal 230 3015 CE ROTTERDAM,,,Sanguer sequencing,"United Kingdom, CLIC Sargent",https://www.clicsargent.org.uk,,,BRCA1 associated protein 1,BAP1,Disease-causing germline mutation(s) in,Q92560,Abnormal fundus morphology,Very frequent (99-80%)
+,,Diarrhea,Extreme worry,Het Oogziekenhuis Rotterdam, +31 (0)10 401 7666,"Schiedamse Vest 180, 3011 BH ROTTERDAM","51,92","4,48",Het Oogziekenhuis Rotterdam, +31 (0)10 401 7666,Schiedamse Vest 180 3011 BH ROTTERDAM,,,MLPA based techniques,"United Kingdom, Teenage Camcer trust",https://www.teenagecancertrust.org,,,G protein subunit alpha q,GNAQ,Disease-causing somatic mutation(s) in,P50148,Choroidal melanoma,Very frequent (99-80%)
+,,Loss of appetite,abnormal excitement or agitation,Medizinische Universität Graz, +43 (0)316 385 12453,"Auenbruggerpl. 2, 8036 GRAZ","47,07","15,44",CHR de Metz-Thionville,  +33 (0)3 87 34 51 35,1 allée du château - CS45001 57085 METZ CEDEX 03,,,FISH,"Australia, RCA Rare Cancers Australia limited",https://melanomafocus.com,,,G protein subunit alpha 11,GNA11,Disease-causing somatic mutation(s) in,P29992,Retinal detachment,Frequent (79-30%)
+,,Sores in the mouth and thorat,new or worsening depression,Allgemeines Krankenhaus der Stadt Wien, +43 (0)1 40400 79000,Währinger Gürtel 18-20 1097 WIEN,"48,22","16,34",University Hospital of Antwerp - UZA, + 32 (0)3 275 97 74,Wilrijkstraat 10 2650 ANTWERPEN-EDEGEM,,,Karyotyping,"Belgium, Fondation contre le Cancer, Fondation d'utilité publique",https://www.cancer.be,,,splicing factor 3b subunit 1,SF3B1,Biomarker tested in,O75533,Iris melanoma,Frequent (79-30%)
+,,Tiredness,seeing things or hearing voices that do not exist (hallucinating),Medizinische Universität Wien, +43 (0)1 40400 39400,"Währinger Str. 13, 1090 WIEN","48,22","16,36",Cliniques Universitaires UCL Saint-Luc, +32 (0)2 764 78 00,"Avenue Hippocrate, 10 1200 BRUSSELS",,,NGS sequencing (except WES),"Cyprus, Cyprus Association for Children with Cancer and Related Diseases ""One Dream One Wish""",http://www.enaoniromiaefxi.com/enaoniromiaefxi/,,,,,,,Ciliary body melanoma,Frequent (79-30%)
+,,Weakness,changes in your vision or speech,St. Anna Kinderspital, +43 (0)1 40170,"Kinderspitalgasse 6, 1090 WIEN","48,22","16,34",Erasme Hospital - ULB, +32 (0)2 555 41 45,Route de Lennik 808 1070 BRUSSELS,,,Microsatellite analysis,"Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends",https://pasykaf.org,,,,,,,Abnormality of refraction,Occasional (29-5%)
+,,Dizziness,loss of coordination,GH Est des HCL - Institut d'Hématologie et d'Oncologie Pédiatrique (IHOPe), + 33 (0)4 78 78 26 06,"1 Place Joseph Renaut, 69008 LYON","45,74","4,88",Universitair Ziekenhuis Brussel - UZ Brussel, +32 (0)2 801 27 01 ,Laarbeeklaan 101 1090 BRUSSELS,,,,"France, Association Source Vive",http://www.source-vive.org/asso.html,,,,,,,Vitreous hemorrhage,Occasional (29-5%)
+,,Unwell feelin,decreased alertness,CLCC Oscar Lambret, + 33 (0)3 20 29 59 56,"3 Rue Frédéric Combemale BP 307, 59020 LILLE CEDEX","50,61","3,03",CHU Sart Tilman - Liège,  +32 (0)4 284 36 40,Domaine Universitaire du Sart Tilman - Bâtiment B 35 · B 4000 LIEGE,,,,"France, La Ligue Contre le Cancer",https://www.ligue-cancer.net,,,,,,,Ocular hypertension,Occasional (29-5%)
+,,Pain at the place where the injection was given,unusual bruising or bleeding,CLCC Institut Gustave Roussy, +33 (0)1 42 11 41 73 ,"114 rue Edouard Vaillant, 94805 VILLEJUIF CEDEX","37,94","-122,32",Ghent University Hospital - UZ Gent,,Corneel Heymanslaan 10 9000 GENT,,,,"Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili",http://www.iodomani.it,,,,,,,Inferior lens subluxation,Occasional (29-5%)
+,,Chest pain,extreme sleepiness or tiredness,CHU de Marseille - Hôpital de la Timone, + 33 (0)4 91 38 68 21,"264 rue Saint-Pierre, 13385 MAIRSEILLE CEDEX 5","43,29","5,40",University Hospitals Leuven - Gasthuisberg, +32 (0)16 34 59 03,Herestraat 49 3000 LEUVEN,,,,"Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer",https://www.kriibskrankkanner.lu,,,,,,,Zonular cataract,Occasional (29-5%)
+,,,difficulty breathing,CHU Paris IdF Ouest - HEGP Hôpital Européen Georges Pompidou, + 33 (0)1 56 09 34 98,"20 rue Leblanc, 75015 PARIS","32,81","-96,95",,,,,,,"Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa",https://koliber-dzieciom.pl,,,,,,,Mydriasis,Occasional (29-5%)
+,,,wheezing,Hôpital Necker-Enfants Malades, +33 (0)1 44 49 45 07,"149 rue de Sèvres, 75743 PARIS
+","48,85","2,32",,,,,,,"Poland, Fundacja ""Krwinka""",http://www.krwinka.org,,,,,,,Metamorphopsia,Occasional (29-5%)
+,,,stomach pain,CHU de la Réunion - Hôpital Félix Guyon,262 (0)262 90 56 40,Bellepierre 97405 SAINT-DENIS cedex,"48,99","-123,11",,,,,,,"Spain, Federación Española de Padres de Niños con Cáncer",https://cancerinfantil.org,,,,,,,Photopsia,Occasional (29-5%)
+,,,yellowing of the skin or eyes,CHU de Nice - Hôpital Pasteur, +33 (0)4 92 03 37 37,"30 Avenue de la Voie Romaine - CS 51069 06001 NICE CEDEX 1
+
+","43,70","1,38",,,,,,,"Serbia, ZVONCICA - Childhood cancer parent organisation",http://www.zvoncica.org.rs,,,,,,,Abnormal visual accommodation,Occasional (29-5%)
+,,,decreased urination,TAYS - Tampere University Hospital,,"Teiskontie 35 33520 TAMPERE
+
+","61,51","23,82",,,,,,,,,,,,,,,Inflammatory abnormality of the eye,Very rare (<4-1%)
+,,,rash,Kuopio University Hospital,358 17 172 396,Puijonlaaksontie 2 70210 KUOPIO,"62,90","27,67",,,,,,,,,,,,,,,Ocular pain,Very rare (<4-1%)
+,,,hives,Turku University Hospital,358 2 313 2400,Kiinamyllynkatu 4-8 20520 TURKU,"38,89","-77,05",,,,,,,,,,,,,,,,
+,,,itching,Universität-Augenklinik Leipzig, + 49 (0)341 97 216 50,"Liebigstr. 10-14 04103 LEIPZIG
+
+","43,69","-70,29",,,,,,,,,,,,,,,,
+,,,difficulty breathing or swallowing,Tumorzentrum Freiburg (CCCF), + 49 (0)6761 270 35555,Hugstetter Str. 49 79106 FREIBURG,"35,20","-101,89",,,,,,,,,,,,,,,,
+,,,,Nationales Centrum für Tumorerkrankungen (NCT), + 49 (0)6221 56 5924,Im Neuenheimer Feld 460 69115 HEIDELBERG,"49,42","8,66",,,,,,,,,,,,,,,,
+,,,,Universitätsmedizin Heidelberg, + 49 (0)6221 56 5924,"Im Neuenheimer Feld 460 69115 HEIDELBERG
+
+","49,42","8,66",,,,,,,,,,,,,,,,
+,,,,Südwestdeutsches Tumorzentrum (CCC) - Tübingen-Stuttgart, + 49 (0)7071 29 85235,Herrenberger Straße 23 72070 TÜBINGEN,"35,03","-92,69",,,,,,,,,,,,,,,,
+,,,,Integratives Tumorzentrum des Universitätsklinikums Ulm, +49 (0)731 500 56056,Albert-Einstein-Allee 23 89081 ULM,"36,26","-115,11",,,,,,,,,,,,,,,,
+,,,,Geschäftsstelle des CCC Erlangen-EMN, + 49 (0)9131 85 47029,Östliche Stadtmauerstraße 30 91054 ERLANGEN,"49,60","11,01",,,,,,,,,,,,,,,,
+,,,,Geschäftsstelle CCC München, +49 (0)89 4400 57430,"Pettenkoferstraße 8a 80336 MÜNCHEN
+
+","48,13","11,56",,,,,,,,,,,,,,,,
+,,,,RHCCC - Roman-Herzog Comprehensive Cancer Center München, + 49 (0)89 41 40 77 07,Trogerstr. 26 81675 MÜNCHEN,"48,14","11,60",,,,,,,,,,,,,,,,
+,,,,CCC Mainfranken an der Universität Würzburg, + 49 (0)931 201 35350,Josef-Schneider-Str.6 97080 WÜRZBURG,"45,48","-122,41",,,,,,,,,,,,,,,,
+,,,,Charité - Universitätsmedizin Berlin (CCM), + 49 (0)30 450 564 222,Charitéplatz 1 10117 BERLIN,"52,53","13,37",,,,,,,,,,,,,,,,
+,,,,Hubertus Wald Tumorzentrum/ Universitäres Cancer Center (UCCH), + 49 (0)40 7410 55692,Martinistr. 52 20246 HAMBURG,"53,59","9,97",,,,,,,,,,,,,,,,
+,,,,Universitäres Centrum für Tumorerkrankungen (UCT) Frankfurt, + 49 (0)69 6301 87333,"Theodor-Stern-Kai 7 60590 FRANKFURT AM MAIN
+
+","50,10","8,66",,,,,,,,,,,,,,,,
+,,,,"Universitätsklinikum Gießen und Marburg GmbH, Standort Marburg", +49 (0)6421 58 62729,Baldingerstraße 35043 MARBURG,"33,32","-86,66",,,,,,,,,,,,,,,,
+,,,,Universitätsmedizin Göttingen, +49 (0)551 39 66327,Robert-Koch-Str. 40 37099 GÖTTINGEN,"51,55","9,95",,,,,,,,,,,,,,,,
+,,,,Medizinische Hochschule Hannover, +49 (0)511 532 3458,Carl-Neuberg-Str. 1 30625 HANNOVE,"52,38","9,81",,,,,,,,,,,,,,,,
+,,,,"Centrum für Integrierte Onkologie (CIO) Köln-Bonn, Standort Bonn", +49 (0)228 287 17059,Sigmund-Freud-Straße 25 53105 BONN,"42,66","-88,28",,,,,,,,,,,,,,,,
+,,,,Klinikum Dortmund gGmbH - Klinikzentrum Mitte, +49 (0)231 953 21700,Beurhausstr. 40 44137 DORTMUND,"41,41","-81,56",,,,,,,,,,,,,,,,
+,,,,Universitätstumorzentrum (UTZ), +49 (0)211 81 08200,"Moorenstr.5 40225 DÜSSELDORF
+
+","1,38","103,90",,,,,,,,,,,,,,,,
+,,,,Westdeutsches Tumorzentrum Essen (WTZ), +49 (0)201 723 1614,"Hufelandstrasse 55 45122 ESSEN
+
+","39,22","-84,12",,,,,,,,,,,,,,,,
+,,,,Universitätsmedizin Mainz, + 49 (0)6131 17 7574,Langenbeckstr. 1 55131 MAINZ,"49,99","8,26",,,,,,,,,,,,,,,,
+,,,,Policlinico S. Orsola-Malpighi - Area S. Orsola, + 39 051 6364443,Via Massarenti 9 40138 BOLOGNA,"44,49","11,38",,,,,,,,,,,,,,,,
+,,,,IRCCS Ospedale Pediatrico Bambino Gesù - SEDE GIANICOLO, +39 06 68592129,Piazza S. Onofrio 4 00165 ROMA RM,"41,92","12,52",,,,,,,,,,,,,,,,
+,,,,"I.R.C.C.S. Ospedale Oncologico ""Giovanni Paolo II"" di Bari", +39 080 5555363,"Viale Orazio Flacco 65 70124 BARI
+","41,11","16,86",,,,,,,,,,,,,,,,
+,,,,Azienda Ospedaliera Universitaria Anna Meyer, + 39 055 5662322,Viale Pieraccini 24 50139 FIRENZE,"43,81","11,25",,,,,,,,,,,,,,,,
+,,,,Uniwersytecki Szpital Dzieciecy w Lublinie, + 48 81 747 72 20,Prof.Antoniego Gebali 6 20-093 LUBLIN,"51,26","22,56",,,,,,,,,,,,,,,,
+,,,,"Instytut ""Pomnik-Centrum Zdrowia Dziecka""", + 48 22815 17 87,"Al. Dzieci Polskich 20 04 -730 WARSAW
+","52,21","21,19",,,,,,,,,,,,,,,,
+,,,,University of Çukurova, +(90)322 338 60 60 Ext3116,01310 ADANA,"46,27","5,07",,,,,,,,,,,,,,,,
+,,,,The Royal Marsden, +44 (0)208 642 6011,"Downs Road, Sutton SURREY SM2 5PT","51,34","-0,19",,,,,,,,,,,,,,,,
+,,,,Royal Manchester Children's Hospital, +44 (0)161 727 2950,Oxford road MANCHESTER M13 9WL,"53,47","-2,24",,,,,,,,,,,,,,,,
+,,,,University Hospital of Antwerp - UZA, + 32 (0)3 275 97 74,Wilrijkstraat 10 2650 ANTWERPEN-EDEGEM,"51,16","4,41",,,,,,,,,,,,,,,,
+,,,,Cliniques Universitaires UCL Saint-Luc, +32 (0)2 764 78 00,"Avenue Hippocrate, 10 1200 BRUSSELS","50,85","4,46",,,,,,,,,,,,,,,,
+,,,,Erasme Hospital - ULB, +32 (0)2 555 41 45,Route de Lennik 808 1070 BRUSSELS,"50,81","4,26",,,,,,,,,,,,,,,,
+,,,,Universitair Ziekenhuis Brussel - UZ Brussel, +32 (0)2 801 27 01,Laarbeeklaan 101 1090 BRUSSELS,"50,89","4,31",,,,,,,,,,,,,,,,
+,,,,CHU Sart Tilman - Liège, +32 (0)4 284 36 40,Domaine Universitaire du Sart Tilman - Bâtiment B 35 · B 4000 LIEGE,"50,63","5,56",,,,,,,,,,,,,,,,
+,,,,Ghent University Hospital - UZ Gent,,Corneel Heymanslaan 10 9000 GENT,"51,02","3,73",,,,,,,,,,,,,,,,
+,,,,University Hospitals Leuven - Gasthuisberg, +32 (0)16 34 59 03,Herestraat 49 3000 LEUVEN,"50,88","4,67",,,,,,,,,,,,,,,,
