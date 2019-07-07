@@ -14,8 +14,11 @@ from nltk import pos_tag
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from textblob import TextBlob
-
 import pandas as pd
+import math
+import os
+from staticmap import StaticMap, CircleMarker
+
 
 # ******************************************************************
 # GREETINGS
@@ -75,14 +78,15 @@ def treatInput(sentence):
 
 from googletrans import Translator
 
-def tr2english(text):
+def tr2english(text,user_data):
     translator = Translator()
     msg_tr = translator.translate(text).text
-    global language
-    language = translator.detect(text).lang
+    if 'language' not in user_data:
+        user_data['language'] = translator.detect(text).lang
+
     return msg_tr
 
-def tr2other(text):
+def tr2other(text,language):
     translator = Translator()
     msg_tr = translator.translate(text, dest=str(language)).text
     return msg_tr
@@ -131,17 +135,8 @@ for i in range(0,len(sinonims)):
         dic[sin.lower()] = type.lower()
         types_melanomes.append(sin.lower())
 
-print(types_melanomes)
-print(dic)
 # ******************************************************************
 
-#DICTIONARY TYPES OF MEDICIN
-
-
-
-
-
-# ******************************************************************
 import geocoder
 
 R = 6371000
@@ -152,24 +147,14 @@ def radians(c):
 
 #distance in meters
 def distancia(hospital, persona):
-    print('dist')
     lat1 = radians(float(hospital[0]))
-    print('a')
     long1 = radians(float(hospital[1]))
-    print('b')
     lat2 = radians(float(persona[0]))
-    print('c')
     long2 = radians(float(persona[1]))
-    print('d')
     lat = abs(lat2-lat1)
-    print('a')
     long = abs(long2 - long1)
-    print(type(lat))
-    print(type(long))
-    a = sin(lat/2)**2 + cos(lat1) * cos(lat2) * sin(long/2) ** 2
-    print('c')
-    c = 2*atan2(sqrt(a),sqrt(1-a))
-    print('c')
+    a = math.sin(lat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(long/2) **2
+    c = 2 * math.atan2(math.sqrt(a),math.sqrt(1-a))
     return R*c
 
 
@@ -194,16 +179,36 @@ def computeLatsAndLongs(hospitals_information):
 
 global information_hospitals
 information_hospitals = []
-hospitals = pd.read_csv('Intraocular_melanoma.csv').values
+#medicins = []
+#side_effects = []
+rows = pd.read_csv('Intraocular_melanoma.csv').values
 
-for hospital in hospitals:
-    name = hospital[4]
-    telefon = hospital[5]
-    address = hospital[6]
-    lat = hospital[7]
-    long = hospital[8]
+for row in rows:
+    name = row[4]
+    telefon = row[5]
+    address = row[6]
+    lat = row[7]
+    long = row[8]
     if (not pd.isnull(name)) and (not pd.isnull(telefon)) and (not pd.isnull(address)) and (not pd.isnull(lat)) and (not pd.isnull(long)):
         information_hospitals.append([name,telefon,address,lat,long])
+
+#    medicin = row[0]
+#    comercial = row[1]
+#    side_effect = row[2]
+
+#    if not pd.isnull(medicin):
+#        medicins.append(medicin)
+
+#    if not pd.isnull(comercial):
+#        medicins.append(comercial)
+
+#    if not pd.isnull(side_effect):
+#        side_effects.append(side_effect)
+
+
+#dict_medicins = {}
+#for medicin in medicins:
+#    dict_medicins[medicin] = side_effects
 
 
 # ******************************************************************
@@ -211,106 +216,101 @@ for hospital in hospitals:
 
 #function to be called
 def responde(bot, update, user_data):
-    user_response = tr2english(update.message.text).lower()
-  #  words = word_tokenize(user_response)
+    user_response = tr2english(update.message.text, user_data).lower()
+    words = word_tokenize(user_response)
+    if user_response == 'bye' or user_response=='Bye':
+        bot.send_message(chat_id=update.message.chat_id, text=tr2other("Goodbye!!",user_data['language']))
 
- #   if user_response == 'bye' or user_response=='Bye':
- #       bot.send_message(chat_id=update.message.chat_id, text=tr2other("Goodbye!!"))
+    elif user_response == 'thanks' or user_response == 'thank you':
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("You are very welcome",user_data['language']))
 
- #   elif user_response == 'thanks' or user_response == 'thank you':
- #           bot.send_message(chat_id=update.message.chat_id, text=tr2other("You are very welcome"))
+    elif greeting(user_response) is not None:   #when greetings appear
+        text = greeting(user_response)+ " " + update.message.chat.first_name + "\nIt is very important for me to make sure that you have been already diagnosed by a professional. Could you please confirm me so?"
+        bot.send_message(chat_id=update.message.chat_id, text=tr2other(text, user_data['language']))
 
- #   elif greeting(user_response) is not None:   #when greetings appear
- #       bot.send_message(chat_id=update.message.chat_id, text=greeting(user_response)+ " " + update.message.chat.first_name)
- #       bot.send_message(chat_id = update.message.chat_id, text=tr2other("It is very important for me to make sure that you have been already diagnosed by a professional. Could you please confirm me so?"))
+    elif 'diagnosed' not in user_data:
+        if ('no' in words) or ("n't" in words) or ("not" in words):
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Don't worry. In this case we believe you should first go to a certified center to diagnose the exact type of melanoma that you suffer",user_data['language']))
 
- #   elif 'diagnosed' not in user_data:
- #       if ('no' in words) or ("n't" in words) or ("not" in words):
- #           bot.send_message(chat_id=update.message.chat_id, text=tr2other("Don't worry. In this case we believe you should first go to a certified center to diagnose the exact type of melanoma that you suffer"))
-
- #       else:
- #           user_data['diagnosed'] = True
- #           bot.send_message(chat_id = update.message.chat_id, text=tr2other("Then, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?"))
-
-
- #   elif ('type_disease' not in user_data) and ('diagnosed' in user_data):
- #           if ('no' in words) or ("n't" in words) or ("not" in words):
- #               bot.send_message(chat_id= update.message.chat_id, text=tr2other("Don't worry..."))
-
- #           else:
- #               print(user_response)
- #               found = False
- #               for type in types_melanomes:
- #                   if type in user_response:
- #                       found = True
- #                       user_data['type_disease'] = dic[type]
- #                       print(user_data['type_disease'])
- #               if found:
- #                  bot.send_message(chat_id=update.message.chat_id, text=tr2other("Perfect"))
- #                   bot.send_message(chat_id = update.message.chat_id, text=tr2other("Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?"))
-
-  #              else:
-  #                  bot.send_message(chat_id=update.message.chat_id,text=tr2other("Go ahead and tell me what is its name, please."))
+        else:
+            user_data['diagnosed'] = True
+            bot.send_message(chat_id = update.message.chat_id, text=tr2other("Then, it would be very helpful for me to know what specific type of Melanoma you are interested in. Do you know its name?",user_data['language']))
 
 
-  #  elif 'medicin' not in user_data:
-  #      bot.send_message(chat_id=update.message.chat_id, text="klasjdfladf")
-  #      user_data['medicin'] = user_response
+    elif ('type_disease' not in user_data) and ('diagnosed' in user_data):
+            if ('no' in words) or ("n't" in words) or ("not" in words):
+                bot.send_message(chat_id= update.message.chat_id, text=tr2other("Don't worry...",user_data['language']))
+
+            else:
+                found = False
+                for type in types_melanomes:
+                    if type in user_response:
+                        found = True
+                        user_data['type_disease'] = dic[type]
+                if found:
+                    bot.send_message(chat_id=update.message.chat_id, text=tr2other("Perfect",user_data['language']))
+                    bot.send_message(chat_id = update.message.chat_id, text=tr2other("Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?",user_data['language']))
+
+                else:
+                    bot.send_message(chat_id=update.message.chat_id,text=tr2other("Go ahead and tell me what is its name, please.",user_data['language']))
 
 
-  #  else:
-    words = treatInput(user_response)
-    #check if this is a where sentence.
-    if 'where' in words:
-        bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option."))
+    elif 'medicin' not in user_data:
+        bot.send_message(chat_id=update.message.chat_id, text="Thank you. This will be very helpful for me to know you a little better. Is there anything I can help you with?")
+        user_data['medicin'] = user_response
+
 
     else:
-        bot.send_message(chat_id = update.message.chat_id, text=words)
+        words = treatInput(user_response)
+        #check if this is a where sentence.
+        if 'where' in words:
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option.", user_data['language']))
+
+        else:
+            bot.send_message(chat_id = update.message.chat_id, text=words)
 
 
 
 def findClosestHospital(lat, long):
-    print('aadsjflasdf')
     list = []
     for i in range(0, len(information_hospitals)):
         hospital = information_hospitals[i]
-        print(hospital)
         lat2 = hospital[3]
         long2 = hospital[4]
-        print(lat2)
-        print(long2)
-        print(lat)
-        print(long)
         distance = distancia([lat,long],[lat2,long2])
-        print(distance)
-        list.append([i,distance])
 
-    list = sorted(list, lambda x: x[1])
-    print(len(list))
-    return list[-1][0]
+        list.append([distance,i])
+
+    list = sorted(list, key=lambda x: x[0])
+    return list[0][1]
 
 
 def giveClosestHospital(bot, update, user_data):
     try:
         name = "%d.png" % random.randint(1000000, 9999999)
-        lat = str(update.message.location.latitude)[1:-1]
-        lon = str(update.message.location.longitude)[1:-1]
-        print('a')
+        lat = str(update.message.location.latitude)
+        lon = str(update.message.location.longitude)
         index = findClosestHospital(lat,lon)
-        #entry = information_hospitals[index]
-        #lat = entry[3]
-        #lon = entry[4]
+        entry = information_hospitals[index]
+        nom = entry[0]
+        telefon = entry[1]
+        address = entry[2]
+        lat = entry[3]
+        lon = entry[4]
 
-        #mapa = StaticMap(500, 500)
-        #mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
-        #imatge = mapa.render()
-        #imatge.save(name)
-        #bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
-        #os.remove(name)
+        mapa = StaticMap(500, 500)
+        mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
+        imatge = mapa.render()
+        imatge.save(name)
+        bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
+
+        text = "This is the location of the nearest hospital in which your type of disease can be treated.\nThis hospital is called " + nom + " and its address is " + address + "\n" + "I would recommend you to contact it through the telefon " + telefon + " so you can book a meet with an specialist."
+        bot.send_message(chat_id=update.message.chat_id, text=tr2other(text,user_data['language']))
+        os.remove(name)
 
     except Exception as e:
         print(e)
-        bot.send_message(chat_id=update.message.chat_id,text='Something goes wrong!')
+        bot.send_message(chat_id=update.message.chat_id,text='Something went wrong! Please try it again later.')
 
 
 
