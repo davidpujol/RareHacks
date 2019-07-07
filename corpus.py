@@ -4,7 +4,7 @@ import pandas as pd
 
 text_final = ""
 
-for i in range(1,8):
+for i in range(1,9):
     print("NUM: ",str(i))
     file = pd.read_csv('csv/drugs_labs_biobanks_dataset -'+str(i)+'.csv').values
 
