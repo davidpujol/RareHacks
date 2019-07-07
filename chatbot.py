@@ -19,10 +19,9 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from textblob import TextBlob
 import pandas as pd
-import math
 import os
 from staticmap import StaticMap, CircleMarker
-
+from math import *
 
 # ******************************************************************
 # GREETINGS
@@ -131,6 +130,8 @@ def responde(bot, update, user_data):
                     if type in user_response:
                         found = True
                         user_data['type_disease'] = dic[type]
+                        print(user_data['type_disease'])
+
                 if found:
                     bot.send_message(chat_id=update.message.chat_id, text=tr2other("Perfect",user_data['language']))
                     bot.send_message(chat_id = update.message.chat_id, text=tr2other("Now, it is important for me to know what drugs have been prescribed for this disease by your doctor?",user_data['language']))
@@ -145,12 +146,12 @@ def responde(bot, update, user_data):
 
 
     else:
+        print('b')
         words = treatInput(user_response)
         #here we have to make a prediction of what will be the answer
+        print(words)
         prediction = "Hello how are you"
-        words = word_tokenize(prediction)
-
-        if words[0] == '$':
+        if words[0] == '$' or ('where' in words):
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option.", user_data['language']))
 
         if words[0] == 'is':
@@ -204,7 +205,8 @@ def giveClosestHospital(bot, update, user_data):
         mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
         imatge = mapa.render()
         imatge.save(name)
-        bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
+      #  bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
+        bot.send_location(chat_id=update.message.chat_id, latitude=lat, longitude=lon)
 
         text = "This is the location of the nearest hospital in which your type of disease can be treated.\nThis hospital is called " + nom + " and its address is " + address + "\n" + "I would recommend you to contact it through the telefon " + telefon + " so you can book a meet with an specialist."
         bot.send_message(chat_id=update.message.chat_id, text=tr2other(text,user_data['language']))
