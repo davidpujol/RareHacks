@@ -4,7 +4,7 @@ import pandas as pd
 
 text_final = ""
 
-for i in range(1,9):
+for i in range(1,8):
     print("NUM: ",str(i))
     file = pd.read_csv('csv/drugs_labs_biobanks_dataset -'+str(i)+'.csv').values
 
@@ -169,27 +169,9 @@ for i in range(1,9):
     for sub in llista:
         for s in sub:
             ss += s + "\n"
-    t="""$ Where is the closest hospital?
-$ Where is the nearest center?
-$ Where is the closest center?
-$ Where is the nearest hospital?
-$ I am looking for the closest hospital?
-$ I am looking for the nearest hospital?
-$ I am looking for the closest center?
-$ I am looking for the nearest center?
-$ What is the closest hospital?
-$ What is the nearest center?
-$ What is the closest center?
-$ What is the nearest hospital?
-$ Where can I find the closest hospital?
-$ Where can I find the nearest center?
-$ Where can I find the closest center?
-$ Where can I find the nearest hospital?"""
-    ss += t
+    text_final +=ss
 
-    f = open("sentences/sentences-"+str(i)+".txt", "w")
-    f.write(ss)
-    f.close()
-
-
+f = open("sentences.txt","w")
+f.write(text_final)
+f.close()
 

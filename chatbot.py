@@ -88,13 +88,13 @@ def readCSV(name):
     global information_hospitals
     information_hospitals = []
 
+    print(name)
     index = names.index(str(name))+1
-   # user_data['index'] = index
-
+    print(str(index))
     name_file = 'csv/drugs_labs_biobanks_dataset -' + str(index) + '.csv'
-
-    rows = pd.read_csv(str(name_file)).values
-
+    print('b')
+    rows = pd.read_csv('Intraocular_melanoma.csv').values
+    print('a')
     for row in rows:
         name = row[4]
         telefon = row[5]
@@ -161,8 +161,9 @@ def responde(bot, update, user_data):
         words = " ".join(words)
         print(words)
         prediction = predictAnswer(words)
+        print(prediction)
 
-        if '$' in prediction:
+        if words[0] == '$' or ('where' in words):
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option.", user_data['language']))
 
         elif words[0] == 'is':
@@ -217,9 +218,10 @@ def giveClosestHospital(bot, update, user_data):
         bot.send_message(chat_id=update.message.chat_id, text=tr2other(text,user_data['language']))
 
 
+
     except Exception as e:
         print(e)
-        bot.send_message(chat_id=update.message.chat_id,text='Something went wrong! Please try it again later.')
+     #   bot.send_message(chat_id=update.message.chat_id,text='Something went wrong! Please try it again later.')
 
 
 

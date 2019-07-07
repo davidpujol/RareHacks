@@ -27,6 +27,10 @@ def LemNormalize(text):
 
 
 def predictAnswer(input):
+    f = open("sentences.txt", "r")
+    s = f.read()
+    f.close()
+    sent_tokens = nltk.sent_tokenize(s)
     sent_tokens.append(str(input))
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize)  # settings of the tfidf: tokenize the user response into words, delete stop words
     tfidf = TfidfVec.fit_transform(sent_tokens)  # calculate tfidf matrix (how important is every word, using word count and inverse document appearences in every sentence)
