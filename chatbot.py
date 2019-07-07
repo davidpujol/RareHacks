@@ -192,25 +192,6 @@ for row in rows:
     if (not pd.isnull(name)) and (not pd.isnull(telefon)) and (not pd.isnull(address)) and (not pd.isnull(lat)) and (not pd.isnull(long)):
         information_hospitals.append([name,telefon,address,lat,long])
 
-#    medicin = row[0]
-#    comercial = row[1]
-#    side_effect = row[2]
-
-#    if not pd.isnull(medicin):
-#        medicins.append(medicin)
-
-#    if not pd.isnull(comercial):
-#        medicins.append(comercial)
-
-#    if not pd.isnull(side_effect):
-#        side_effects.append(side_effect)
-
-
-#dict_medicins = {}
-#for medicin in medicins:
-#    dict_medicins[medicin] = side_effects
-
-
 # ******************************************************************
 
 
@@ -262,7 +243,10 @@ def responde(bot, update, user_data):
 
     else:
         words = treatInput(user_response)
-        #check if this is a where sentence.
+        #here we have to make a prediction of what will be the answer
+
+        if
+
         if 'where' in words:
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option.", user_data['language']))
 

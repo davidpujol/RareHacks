@@ -1,0 +1,16 @@
+$ Where is the closest hospital?
+$ Where is the nearest center?
+$ Where is the closest center?
+$ Where is the nearest hospital?
+$ I am looking for the closest hospital?
+$ I am looking for the nearest hospital?
+$ I am looking for the closest center?
+$ I am looking for the nearest center?
+$ What is the closest hospital?
+$ What is the nearest center?
+$ What is the closest center?
+$ What is the nearest hospital?
+$ Where can I find the closest hospital?
+$ Where can I find the nearest center?
+$ Where can I find the closest center?
+$ Where can I find the nearest hospital?
