@@ -5,11 +5,11 @@ file = pd.read_csv('drugs_labs_biobanks_dataset.csv').values
 
 names = file[:,0]
 dataset = []
-for i in range(23):
+for i in range(25):
     l = list(filter(lambda x: not pd.isnull(x), file[:,i]))
     dataset.append(l)
 
-
+llista=[]
 
 melanoma = "intraocular melanoma"
 
@@ -22,18 +22,21 @@ def medical_name(list):
         slist.append(s2)
     return slist
 
-print(medical_name(dataset[0]))
+llista.append(medical_name(dataset[0]))
 
 def brand_name(list):
     slist = []
-    for l in dataset[0]:
-        s1= "The  brand name for " +l+" is "+ list[0]+"."
-        s2 = "The drug "+l+" is sold as "+list[0]+"."
-        slist.append(s1)
-        slist.append(s2)
+    if len(list) > 0:
+        for l in dataset[0]:
+            s1= "The  brand name for " +l+" is "+ list[0]+"."
+            s2 = "The drug "+l+" is sold as "+list[0]+"."
+            slist.append(s1)
+            slist.append(s2)
+    else:
+        slist.append("There is no consensuate for treating this illness, go to your medical center")
     return slist
 
-print(1,brand_name(dataset[1]))
+llista.append(brand_name(dataset[1]))
 
 def drug_side_effects(list):
     slist=[]
@@ -44,7 +47,7 @@ def drug_side_effects(list):
     slist.append(s2)
     return slist
 
-print(2,drug_side_effects(dataset[2]))
+llista.append(drug_side_effects(dataset[2]))
 def dangerous_side_effects(list):
     slist=[]
     l = ", ".join(list)
@@ -53,7 +56,7 @@ def dangerous_side_effects(list):
     slist.append(s1)
     slist.append(s2)
     return slist
-print(3,dangerous_side_effects(dataset[3]))
+llista.append(dangerous_side_effects(dataset[3]))
 def diagnostic_test(list):
     slist=[]
     l = ", ".join(list)
@@ -63,7 +66,7 @@ def diagnostic_test(list):
     slist.append(s2)
     return slist
 
-print(4,diagnostic_test(dataset[14]))
+llista.append(diagnostic_test(dataset[14]))
 def patient_organisation(list):
     slist=[]
     l= ",".join(list)
@@ -73,7 +76,7 @@ def patient_organisation(list):
     slist.append(s2)
     return slist
 
-print(5,patient_organisation(dataset[15]))
+llista.append(patient_organisation(dataset[15]))
 
 def po_link(list):
     slist=[]
@@ -83,7 +86,7 @@ def po_link(list):
         slist.append(s)
     return slist
 
-print(6,po_link(dataset[16]))
+llista.append(po_link(dataset[16]))
 
 def age_onset(list):
     slist=[]
@@ -95,7 +98,7 @@ def age_onset(list):
         slist.append(s2)
     return slist
 
-print(7,age_onset(dataset[17]))
+llista.append(age_onset(dataset[17]))
 
 def prevalence_eu(list):
     slist=[]
@@ -104,29 +107,46 @@ def prevalence_eu(list):
         slist.append(s)
     return slist
 
-print(8,prevalence_eu(dataset[18]))
+llista.append(prevalence_eu(dataset[18]))
 
 def genes(list):
     slist=[]
     link="https://www.uniprot.org/"
-    for g,s,u in list:
-        s="The illness can be caused by a mutation in "+g+" ("+s+"), you find more information visiting "+link+" using this reference: "+u+"."
+    for g,u in list:
+        s="The illness can be caused by a mutation in "+g[0]+" ("+g[1]+"), you can find more information visiting "+link+" using this reference: "+u+"."
         slist.append(s)
     return slist
 
-ls = zip(dataset[19],dataset[20])
+ls = zip(dataset[19], dataset[20])
+ls = list(zip(ls, dataset[21]))
 
-ls = list(zip(ls,dataset[21]))
+llista.append(genes(ls))
 
-print(ls)
-print(9,genes(ls))
-
-def symptoms(list):
+def symptoms(dic):
     #list = [veryfrequent,[l]]
     slist = []
-    for sy,f in list:
-        s = f+"symptoms are: " +", ".join(sy)+"."
+    for (k,v) in dic.items():
+        s = k+" symptoms for "+ melanoma +"are: "+", ".join(v)+"."
         slist.append(s)
     return slist
 
-print(10,symptoms(dataset[23:24]))
+l =list(zip(dataset[23],dataset[24]))
+
+dic ={}
+for v,k in l:
+    if k in dic:
+        dic[k].append(v)
+    else:
+        dic[k]=[v]
+
+llista.append(symptoms(dic))
+print(llista)
+ss=""
+for sub in llista:
+    for s in sub:
+        ss += s + "\n\n"
+
+f = open("sentences.txt","w")
+f.write(ss)
+f.close()
+
