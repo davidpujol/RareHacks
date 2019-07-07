@@ -10,39 +10,42 @@ import corpus
 
 #text = nltk.corpus.gutenberg.sents('melville-moby_dick.txt')
 
-text = corpus.llista
+f = open("sentences.txt","r")
+s = f.read()
+f.close()
+text = s.splitlines()
 
-text = [[w] for sub in text for w in sub]
+#text = [[s] for s in text]
+#sentences = [[w] for sub in text for w in sub]
 
 l = []
 for s in text:
-    input = nltk.word_tokenize(str(s).lower())
+    input = nltk.word_tokenize(s.lower())
     l.append(input)
 
+
 print(l)
-#print(text)
 documents = [TaggedDocument(doc, [i]) for i, doc in enumerate(l)]
 
-#print(common_texts)
+print(documents)
 #documents = [TaggedDocument(doc, [i]) for i, doc in enumerate(common_texts)]
 
 #print(len(text))
-model = Doc2Vec(documents)
+model = Doc2Vec(documents, vector_size=2, window=2, min_count=1, workers=4,epochs=10)
 #, vector_size=5, window=2, min_count=1, workers=4
 
 #model.save("models/doc2vec_model")
 #model = Doc2Vec.load("models/doc2vec_model")  # you can continue training with the loaded model!
-#print(model.most_similar(['Emma']))
 
 
 input = nltk.word_tokenize("Proleukin".lower())
 input_v = model.infer_vector(input)
 
 #sentences = [ " ".join(w) for w in text]
-print(text[:5])
+
 llista = []
 for sen in text:
-    v = model.infer_vector(sen)
+    v = model.infer_vector([sen.lower()])
     llista.append(v)
 
 
@@ -53,6 +56,7 @@ for v in llista:
     i+=1
 
 s = sorted(similituds, key=lambda x: x[0])
-
-
-print(text[s[-1][1]])
+print(s)
+#print(model.docvecs.similarity("proleukin",'4'))
+for i in range(1,10):
+    print(i," : ",text[s[-i][1]])
