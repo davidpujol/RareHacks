@@ -236,3 +236,19 @@ The illness can be caused by a mutation in TERF2 interacting protein (TERF2IP), 
 Occasional (29-5%) symptoms for Familial melanoma are: Retinopathy, Abnormality of extrapyramidal motor function, Neoplasm of the pancreas, Neoplasm of the stomach, Neoplasm of the breast.
 Frequent (79-30%) symptoms for Familial melanoma are: Dry skin, Freckling, Abnormality of the hair, Abnormality of the lymphatic system.
 Very frequent (99-80%) symptoms for Familial melanoma are: Melanoma, Nevus.
+$ Where is the closest hospital?
+$ Where is the nearest center?
+$ Where is the closest center?
+$ Where is the nearest hospital?
+$ I am looking for the closest hospital?
+$ I am looking for the nearest hospital?
+$ I am looking for the closest center?
+$ I am looking for the nearest center?
+$ What is the closest hospital?
+$ What is the nearest center?
+$ What is the closest center?
+$ What is the nearest hospital?
+$ Where can I find the closest hospital?
+$ Where can I find the nearest center?
+$ Where can I find the closest center?
+$ Where can I find the nearest hospital?
