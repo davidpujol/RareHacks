@@ -1,0 +1,45 @@
+Medical name ,Brand Name,Drugs side Effects,Dangerous Side effects,Expert Centres,Contact Expert Centres,Contact II Expert Centres,Longitude,Latitude,Genetic Counseling,Contact Genetic C,Contact II Genetic C,Latitude2,Longitude2,Diagnostic test,Patient Organisation (PO),PO Link,Age of onset,Prevalence in Europe,Genes,Gene symbol,Type of mutation,UniProtKB,Symptoms and signs,Freq symp
+,,,,Allgemeines Krankenhaus der Stadt Wien, +43 (0)1 40400 77000,Währinger Gürtel 18-20 1097 WIEN AUSTRIA,,,Kepler Universitätsklinikum - Med Campus IV, +43 (0)5 7680 84 29601,"Krankenhausstraße 26-30, 4020 LINZ, AUSTRIA ",,,MLPA based techniques,"United Kingdom, Melanoma Focus",https://melanomafocus.com,Adult,1-9 / 100 000,cyclin dependent kinase 4,CDK4,Major susceptibility factor in,P11802,Retinopathy,Occasional (29-5%)
+,,,,ASST Spedali Civili di Brescia, +39 030 3995300,Piazzale Spedali Civili 1 25123 BRESCIA ITALY,,,Salzburger Landeskliniken (SALK) / Paracelsus Med. Privatuniversität (PMU), +43 (0)5 7255 26255,"Müllner Hauptstraße 48, 5020 SALZBURG, AUSTRIA",,,Sanger sequencing,"United Kingdom, CLIC Sargent",https://www.clicsargent.org.uk,Adult,1-9 / 100 000,cyclin dependent kinase inhibitor 2A,CDKN2A,Major susceptibility factor in,P42771,Dry skin,Frequent (79-30%)
+,,,,LUMC - Leids Universitair Medisch Centrum, +31 (0)71 526 2630,"Albinusdreef 2 2333 ZA LEIDEN NETHERLANDS
+",,,Medizinische Universität Wien, +43 (0)1 40160 56531," Spitalgasse 23, 1090 Wien",,,PCR based techniques,"United Kingdom, Teenage Camcer trust",https://www.teenagecancertrust.org,Adult,1-9 / 100 000,melanocyte inducing transcription factor,MITF,Major susceptibility factor in,O75030,Freckling,Frequent (79-30%)
+,,,,Medizinische Universität Innsbruck, +43 (0)512 504 23026,"6020 INNSBRUCK AUSTRIA
+",,,University Hospital of Antwerp - UZA, + 32 (0)3 275 97 74,"Wilrijkstraat 10, 2650 ANTWERPEN-EDEGEM",,,FISH,"Australia, RCA Rare Cancers Australia limited",https://melanomafocus.com,Adult,1-9 / 100 000,telomerase reverse transcriptase,TERT,Major susceptibility factor in,O14746,Abnormality of the hair,Frequent (79-30%)
+,,,,CHU de Lyon HCL - GH Est-Hôpital Femme Mère Enfant, +33 (0)4 27 85 61 26,59 Boulevard Pinel 69677 BRON CEDEX FRANCE,,,Cliniques Universitaires UCL Saint-Luc, +32 (0)2 764 78 00,"Avenue Hippocrate, 10, 1200 BRUSSELS, BELGIUM",,,Whole Exome Sequencing (WES),"Belgium, Fondation contre le Cancer, Fondation d'utilité publique",https://www.cancer.be,Adult,1-9 / 100 000,melanocortin 1 receptor,MC1R,Major susceptibility factor in,Q01726,Abnormality of extrapyramidal motor function,Occasional (29-5%)
+,,,,CHU de Saint-Etienne - Hôpital Nord, +33 (0)4 77 82 83 33,Avenue Albert Raimond 42270 SAINT-PRIEST-EN-JAREZ FRANCE,,,,,,,,Molecular genetics,"Cyprus, Cyprus Association for Children with Cancer and Related Diseases ""One Dream One Wish""",http://www.enaoniromiaefxi.com/enaoniromiaefxi/,Adult,1-9 / 100 000,BRCA1 associated protein 1,BAP1,Major susceptibility factor in,Q92560,Melanoma,Very frequent (99-80%)
+,,,,CHU Dijon Bourgogne - Hôpital François Mitterrand, +33 (0)3 80 29 33 36,2 bd Maréchal de Lattre de Tassigny 21000 DIJON FRANCE,,,,,,,,,"Cyprus, PA.SY.KA.F - The Cyprus Association of Cancer Patients and Friends",https://pasykaf.org,Adult,1-9 / 100 000,cyclin dependent kinase inhibitor 2B,CDKN2B,Candidate gene tested in,P42772,Neoplasm of the pancreas,Occasional (29-5%)
+,,,,CHRU de Brest - Hôpital Morvan, +33 (0)2 98 22 33 15,2 Avenue Foch 29609 BREST CEDEX FRANCE,,,,,,,,,"France, Association Source Vive",http://www.source-vive.org/asso.html,Adult,1-9 / 100 000,O-6-methylguanine-DNA methyltransferase,MGMT,Major susceptibility factor in,P16455,Nevus,Very frequent (99-80%)
+,,,,CHU de Nancy - Hôpitaux de Brabois, +33 (0)3 83 15 48 00,Rue du Morvan 54511 VANDOEUVRE-LÈS-NANCY CEDEX FRANCE,,,,,,,,,"France, La Ligue Contre le Cancer",https://www.ligue-cancer.net,Adult,1-9 / 100 000,protection of telomeres 1,POT1,Major susceptibility factor in,Q9NUX5,Neoplasm of the stomach,Occasional (29-5%)
+,,,,CHRU de Lille - Hôpital Claude Huriez, +33 (0)3 20 44 41 92,Rue Michel Polonovski 59037 LILLE CEDEX FRANCE,,,,,,,,,"Italy, ALTI - Associazione ''Io, domani'' per la Lotta contro i Tumori Infantili",http://www.iodomani.it,Adult,1-9 / 100 000,ACD shelterin complex subunit and telomerase recruitment factor,ACD,Major susceptibility factor in,Q96AP0,Neoplasm of the breast,Occasional (29-5%)
+,,,,"CHU Paris Centre - Hôpital Cochin, Site Tarnier", +33 (0)1 58 41 42 43,89 rue d'Assas 75006 PARIS FRANCE,,,,,,,,,"Luxembourg, Een Haerz fir kriibskrank Kanner / Un coeur pour les enfants atteints de cancer",https://www.kriibskrankkanner.lu,Adult,1-9 / 100 000,TERF2 interacting protein,TERF2IP,Major susceptibility factor in,Q9NYB0,Abnormality of the lymphatic system,Frequent (79-30%)
+,,,,Hôpital Necker-Enfants Malades, +33 (0)1 44 49 43 37,149 rue de Sèvres 75743 PARIS FRANCE,,,,,,,,,"Poland, KOLIBER - Stowarzyszenie na rzecz dzieci z choroba nowotworowa",https://koliber-dzieciom.pl,,,,,,,,
+,,,,Universitäts-Klinik für Dermatologie und Venerologie, +49 (0)761 270 67950,Hauptstraße 7 79104 FREIBURG GERMANY,,,,,,,,,"Poland, Fundacja ""Krwinka""",http://www.krwinka.org,,,,,,,,
+,,,,Nationales Centrum für Tumorerkrankungen (NCT), +49 (0)6221 56 8562,Im Neuenheimer Feld 460 69115 HEIDELBERG GERMANY,,,,,,,,,"Spain, Federación Española de Padres de Niños con Cáncer",https://cancerinfantil.org,,,,,,,,
+,,,,Universitätsmedizin Mannheim, +49 (0)621 383 3024,Theodor-Kutzer-Ufer 1 - 3 68167 MANNHEIM GERMANY,,,,,,,,,"Serbia, ZVONCICA - Childhood cancer parent organisation",http://www.zvoncica.org.rs,,,,,,,,
+,,,,Hautklinik am Universitätsklinikum Erlangen, +49 (0)9131 85 33165,Ulmenweg 18 91054 ERLANGEN GERMANY,,,,,,,,,,,,,,,,,,
+,,,,Klinik und Poliklinik für Dermatologie und Allergologie - Campus Innenstadt, +49 (0)89 4400 56391,Frauenlobstraße 9-11 80337 MÜNCHEN GERMANY,,,,,,,,,,,,,,,,,,
+,,,,Klinik und Poliklinik für Dermatologie und Allergologie am Biederstein, +49 (0)89 4140 3170,"Biedersteiner Str. 29 80802 MÜNCHEN GERMANY
+",,,,,,,,,,,,,,,,,,
+,,,,Universitäts-Hautklinik Würzburg, +49 (0)931 201 26351,Josef-Schneider-Str. 2 97080 WÜRZBURG GERMANY,,,,,,,,,,,,,,,,,,
+,,,,Universitäts-Hautklinik Würzburg, +49 (0)931 201 26351,Josef-Schneider-Str. 2 97080 WÜRZBURG GERMANY,,,,,,,,,,,,,,,,,,
+,,,,Klinikum Darmstadt, +49 (0)6151 107 4131 ,"Heidelberger Landstraße 379 64297 DARMSTADT GERMANY
+",,,,,,,,,,,,,,,,,,
+,,,,CHU Sart Tilman - Liège,  +32 (0)4 284 36 40,Domaine Universitaire du Sart Tilman - Bâtiment B 35 · B 4000 LIEGE BELGIUM,,,,,,,,,,,,,,,,,,
+,,,,Ghent University Hospital - UZ Gent,,"Corneel Heymanslaan 10 9000 GENT BELGIUM
+",,,,,,,,,,,,,,,,,,
+,,,,University Hospitals Leuven - Gasthuisberg, +32 (0)16 34 59 03,Herestraat 49 3000 LEUVEN BELGIUM,,,,,,,,,,,,,,,,,,
+,,,,Kuopio University Hospital, +358 17 172 396,"Puijonlaaksontie 2 70210 KUOPIO FINLAND
+",,,,,,,,,,,,,,,,,,
+,,,,TAYS - Tampere University Hospital,,Teiskontie 35 33520 TAMPERE FINLAND,,,,,,,,,,,,,,,,,,
+,,,,Turku University Hospital, +358 2 313 2400,Kiinamyllynkatu 4-8 20520 TURKU FINLAND,,,,,,,,,,,,,,,,,,
+,,,,GH Est des HCL - Institut d'Hématologie et d'Oncologie Pédiatrique (IHOPe), +33 (0)4 78 78 26 06,1 Place Joseph Renaut 69008 LYON FRANCE,,,,,,,,,,,,,,,,,,
+,,,,CLCC Oscar Lambret,"  +33 (0)3 20 29 59 56
+",3 Rue Frédéric Combemale BP 307 59020 LILLE CEDEX FRANCE,,,,,,,,,,,,,,,,,,
+,,,,CLCC Institut Gustave Roussy, +33 (0)1 42 11 41 73,114 rue Edouard Vaillant 94805 VILLEJUIF CEDEX FRANCE,,,,,,,,,,,,,,,,,,
+,,,,"Department of Dermatology, Venereology and Dermatoncology, Semmelweis University", +36 (06) 1 21029405720,Mária u. 41 1085 BUDAPEST HUNGARY,,,,,,,,,,,,,,,,,,
+,,,,Tel-Aviv Sourasky Medical Center,972(3)6974287,6 Weizmann Street TEL AVIV 64239 ISRAEL,,,,,,,,,,,,,,,,,,
+,,,,"Azienda Ospedaliera Universitaria ""Federico II""", +39 081 7462412,Via Sergio Pansini 5 80131 NAPOLI ITALY,,,,,,,,,,,,,,,,,,
+,,,,Policlinico S. Orsola-Malpighi - Area S. Orsola, +39 051 6364443,Via Massarenti 9 40138 BOLOGNA ITALY,,,,,,,,,,,,,,,,,,
+,,,,Policlinico S. Orsola-Malpighi - Area S. Orsola, +39 051 6363474,Via Massarenti 9 40138 BOLOGNA ITALY,,,,,,,,,,,,,,,,,,
+,,,,Azienda Ospedaliera S. Camillo-Forlanini - Ospedale San Camillo, +39 06 58704355,Circonvallazione Gianicolense 87 00152 ROMA ITALY,,,,,,,,,,,,,,,,,,
+,,,,IRCCS Ospedale Pediatrico Bambino Gesù - SEDE GIANICOLO, +39 06 68592509,Piazza S. Onofrio 4 00165 ROMA RM ITALY,,,,,,,,,,,,,,,,,,
