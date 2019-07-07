@@ -40,15 +40,17 @@ def greeting(sentence):
 #DICTIONARY OF TYPES OF MELANOMA
 
 tipus = [
-'Uveal melanoma',
-'Diffuse leptomeningeal melanocytosis',
-'Familial atypical multiple mole melanoma syndrome',
-'Familial melanoma',
-'Malignant melanoma of the mucosa',
-'Melanoma and neural system tumor syndrome',
-'Melanoma of soft tissue',
-'Primary melanoma of the central nervous system'
+'uveal melanoma',
+'diffuse leptomeningeal melanocytosis',
+'familial atypical multiple mole melanoma syndrome',
+'familial melanoma',
+'malignant melanoma of the mucosa',
+'melanoma and neural system tumor syndrome',
+'melanoma of soft tissue',
+'primary melanoma of the central nervous system'
 ]
+names= ['uveal melanoma','primary melanoma of the central nervous system', 'melanoma of soft tissue', 'diffuse leptomeningeal melanocytosis', 'melanoma and neural system tumor syndrome', 'familial atypical multiple mole melanoma syndrome', 'familial melanoma', 'malignant melanoma of the mucosa']
+
 
 sinonims = [
     ['choroidal melanoma' ,'iris melanoma','Intraocular melanoma'],
@@ -82,18 +84,26 @@ for i in range(0,len(sinonims)):
 # *********************************************************************
 #WE WILL USE THIS TO READ THE INFORMATION OF THE DISEASE WE HAVE FOUND
 
-global information_hospitals
-information_hospitals = []
-rows = pd.read_csv('Intraocular_melanoma.csv').values
+def readCSV(name):
+    global information_hospitals
+    information_hospitals = []
 
-for row in rows:
-    name = row[4]
-    telefon = row[5]
-    address = row[6]
-    lat = row[7]
-    long = row[8]
-    if (not pd.isnull(name)) and (not pd.isnull(telefon)) and (not pd.isnull(address)) and (not pd.isnull(lat)) and (not pd.isnull(long)):
-        information_hospitals.append([name,telefon,address,lat,long])
+    print(name)
+    index = names.index(str(name))+1
+    print(str(index))
+    name_file = 'csv/drugs_labs_biobanks_dataset -' + str(index) + '.csv'
+    print('b')
+    rows = pd.read_csv(str(name_file)).values
+    print('a')
+    for row in rows:
+        name = row[4]
+        telefon = row[5]
+        address = row[6]
+        lat = row[7]
+        long = row[8]
+        if (not pd.isnull(name)) and (not pd.isnull(telefon)) and (not pd.isnull(address)) and (not pd.isnull(lat)) and (not pd.isnull(long)):
+            information_hospitals.append([name,telefon,address,lat,long])
+
 
 # ******************************************************************
 
@@ -130,7 +140,8 @@ def responde(bot, update, user_data):
                     if type in user_response:
                         found = True
                         user_data['type_disease'] = dic[type]
-                        print(user_data['type_disease'])
+                        readCSV(user_data['type_disease'])
+                        print(found)
 
                 if found:
                     bot.send_message(chat_id=update.message.chat_id, text=tr2other("Perfect",user_data['language']))
