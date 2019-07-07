@@ -5,6 +5,7 @@ from telegram.ext import MessageHandler, Filters
 from traductor import *
 from treatLocation import *
 from treatInput import *
+from freq import *
 
 #nltk
 import nltk
@@ -96,7 +97,6 @@ for row in rows:
 
 # ******************************************************************
 
-
 #function to be called
 def responde(bot, update, user_data):
     user_response = tr2english(update.message.text, user_data).lower()
@@ -146,11 +146,12 @@ def responde(bot, update, user_data):
 
 
     else:
-        print('b')
         words = treatInput(user_response)
-        #here we have to make a prediction of what will be the answer
+        words = " ".join(words)
         print(words)
-        prediction = "Hello how are you"
+        prediction = predictAnswer(words)
+      #  prediction[0] = prediction[0].upper()
+
         if words[0] == '$' or ('where' in words):
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option.", user_data['language']))
 
@@ -201,11 +202,6 @@ def giveClosestHospital(bot, update, user_data):
         lat = entry[3]
         lon = entry[4]
 
-        mapa = StaticMap(500, 500)
-        mapa.add_marker(CircleMarker((lon, lat), 'blue', 10))
-        imatge = mapa.render()
-        imatge.save(name)
-      #  bot.send_photo(chat_id=update.message.chat_id, photo=open(name, 'rb'))
         bot.send_location(chat_id=update.message.chat_id, latitude=lat, longitude=lon)
 
         text = "This is the location of the nearest hospital in which your type of disease can be treated.\nThis hospital is called " + nom + " and its address is " + address + "\n" + "I would recommend you to contact it through the telefon " + telefon + " so you can book a meet with an specialist."

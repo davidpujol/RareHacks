@@ -40,9 +40,7 @@ def extractSintagma (text):
 def treatInput(sentence):
    # sentence = str(correccio(sentence.lower()))
     sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
-    #aux = removeStopWords(sentence)
     words = word_tokenize(sentence)
     pairs = pos_tag(words)
     result = [lemmatize(p) for p in pairs]
-  #  result = extractSintagma(result)
     return result

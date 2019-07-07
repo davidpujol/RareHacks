@@ -25,13 +25,14 @@ def LemNormalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
 
-sent_tokens.append('What is the closest hospital near me?')
-TfidfVec = TfidfVectorizer(tokenizer=LemNormalize)  # settings of the tfidf: tokenize the user response into words, delete stop words
-tfidf = TfidfVec.fit_transform(sent_tokens)  # calculate tfidf matrix (how important is every word, using word count and inverse document appearences in every sentence)
-vals = cosine_similarity(tfidf[-1],tfidf)  # calculate the similarity between all the document and the last entry, which is the users response
 
-idx = vals.argsort()[0][-2]
-flat = vals.flatten()
-flat.sort()
-req_tfidf = flat[-2]  # get the one that fits best (not considering the last which was our initial entry)
-print(sent_tokens[idx])
+def predictAnswer(input):
+    sent_tokens.append(str(input))
+    TfidfVec = TfidfVectorizer(tokenizer=LemNormalize)  # settings of the tfidf: tokenize the user response into words, delete stop words
+    tfidf = TfidfVec.fit_transform(sent_tokens)  # calculate tfidf matrix (how important is every word, using word count and inverse document appearences in every sentence)
+    vals = cosine_similarity(tfidf[-1],tfidf)  # calculate the similarity between all the document and the last entry, which is the users response
+
+    idx = vals.argsort()[0][-2]
+    flat = vals.flatten()
+    flat.sort()
+    return sent_tokens[idx]
