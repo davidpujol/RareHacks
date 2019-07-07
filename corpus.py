@@ -169,9 +169,27 @@ for i in range(1,8):
     for sub in llista:
         for s in sub:
             ss += s + "\n"
-    text_final +=ss
+    t="""$ Where is the closest hospital?
+$ Where is the nearest center?
+$ Where is the closest center?
+$ Where is the nearest hospital?
+$ I am looking for the closest hospital?
+$ I am looking for the nearest hospital?
+$ I am looking for the closest center?
+$ I am looking for the nearest center?
+$ What is the closest hospital?
+$ What is the nearest center?
+$ What is the closest center?
+$ What is the nearest hospital?
+$ Where can I find the closest hospital?
+$ Where can I find the nearest center?
+$ Where can I find the closest center?
+$ Where can I find the nearest hospital?"""
+    ss += t
 
-f = open("sentences.txt","w")
-f.write(text_final)
-f.close()
+    f = open("sentences/sentences-"+str(i)+".txt", "w")
+    f.write(ss)
+    f.close()
+
+
 
