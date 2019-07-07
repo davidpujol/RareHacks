@@ -2,6 +2,10 @@
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, Filters
 
+from traductor import *
+from treatLocation import *
+from treatInput import *
+
 #nltk
 import nltk
 import numpy as np
@@ -30,67 +34,6 @@ def greeting(sentence):
     for word in sentence.split():
         if word.lower() in GREETING_INPUTS:
             return random.choice(GREETING_RESPONSES)
-
-
-
-# ******************************************************************
-#TREAT THE INPUT
-
-#LEMMATIZATION
-remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)	#remove punctuation
-
-#funtion to lemmatize a sentance
-lemmer = WordNetLemmatizer()	#this is an internal dictionary
-def lemmatize(p):
-    if p[1][0] in {'N','V'}:
-        return lemmer.lemmatize(p[0].lower(), pos=p[1][0].lower())
-    return p[0]
-
-#STOPWORDS
-def removeStopWords(sentance):
-    words = word_tokenize(sentance)
-    filtered_words = [word for word in words if word not in stopwords.words('english')]
-    return filtered_words
-
-#CORRECCIO
-def correccio(text):
-    s = TextBlob(text)
-    return s.correct()
-
-def extractSintagma (text):
-    pairs = pos_tag(text)
-    grammar = "NP: {<DT>?<JJ>*<NN>}"
-    cp = nltk.RegexpParser(grammar)
-    result = cp.parse(pairs)
-    return result
-
-def treatInput(sentence):
-   # sentence = str(correccio(sentence.lower()))
-    sentence = sentence.lower().translate(remove_punct_dict)    #eliminem els punts
-    #aux = removeStopWords(sentence)
-    words = word_tokenize(sentence)
-    pairs = pos_tag(words)
-    result = [lemmatize(p) for p in pairs]
-  #  result = extractSintagma(result)
-    return result
-
-# ******************************************************************
-
-from googletrans import Translator
-
-def tr2english(text,user_data):
-    translator = Translator()
-    msg_tr = translator.translate(text).text
-    if 'language' not in user_data:
-        user_data['language'] = translator.detect(text).lang
-
-    return msg_tr
-
-def tr2other(text,language):
-    translator = Translator()
-    msg_tr = translator.translate(text, dest=str(language)).text
-    return msg_tr
-
 
 
 # ******************************************************************
@@ -129,58 +72,18 @@ dic = {}
 types_melanomes = []
 for i in range(0,len(sinonims)):
     family = sinonims[i]
-    type = tipus[i]
+    type = tipus[i].lower()
     dic[type.lower()] = type.lower()
     for sin in family:
         dic[sin.lower()] = type.lower()
         types_melanomes.append(sin.lower())
 
-# ******************************************************************
-
-import geocoder
-
-R = 6371000
-pi = 3.14159
-
-def radians(c):
-    return pi/180 * c
-
-#distance in meters
-def distancia(hospital, persona):
-    lat1 = radians(float(hospital[0]))
-    long1 = radians(float(hospital[1]))
-    lat2 = radians(float(persona[0]))
-    long2 = radians(float(persona[1]))
-    lat = abs(lat2-lat1)
-    long = abs(long2 - long1)
-    a = math.sin(lat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(long/2) **2
-    c = 2 * math.atan2(math.sqrt(a),math.sqrt(1-a))
-    return R*c
-
-
-def getLatLong (address):
-    g = geocoder.mapquest(address, key='SBCjXsQ99VWjbfwSFYh1UDv3QhzYfyGj')
-    lat = g.lat
-    lon = g.lng
-    return [lat,lon]
-
-def computeLatsAndLongs(hospitals_information):
-    for i in range(0,len(hospitals_information)):
-        list = getLatLong(hospitals_information[i][2])
-        hospitals_information[i][3] = list[0]
-        hospitals_information[i][4] = list[1]
-
-
-
 
 # *********************************************************************
 #WE WILL USE THIS TO READ THE INFORMATION OF THE DISEASE WE HAVE FOUND
 
-
 global information_hospitals
 information_hospitals = []
-#medicins = []
-#side_effects = []
 rows = pd.read_csv('Intraocular_melanoma.csv').values
 
 for row in rows:
@@ -191,25 +94,6 @@ for row in rows:
     long = row[8]
     if (not pd.isnull(name)) and (not pd.isnull(telefon)) and (not pd.isnull(address)) and (not pd.isnull(lat)) and (not pd.isnull(long)):
         information_hospitals.append([name,telefon,address,lat,long])
-
-#    medicin = row[0]
-#    comercial = row[1]
-#    side_effect = row[2]
-
-#    if not pd.isnull(medicin):
-#        medicins.append(medicin)
-
-#    if not pd.isnull(comercial):
-#        medicins.append(comercial)
-
-#    if not pd.isnull(side_effect):
-#        side_effects.append(side_effect)
-
-
-#dict_medicins = {}
-#for medicin in medicins:
-#    dict_medicins[medicin] = side_effects
-
 
 # ******************************************************************
 
@@ -262,12 +146,30 @@ def responde(bot, update, user_data):
 
     else:
         words = treatInput(user_response)
-        #check if this is a where sentence.
-        if 'where' in words:
+        #here we have to make a prediction of what will be the answer
+        prediction = "Hello how are you"
+        words = word_tokenize(prediction)
+
+        if words[0] == '$':
             bot.send_message(chat_id=update.message.chat_id, text=tr2other("Please send me your location, so I can give you the best option.", user_data['language']))
 
+        if words[0] == 'is':
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, it is"))
+
+        if words[0] == 'should':
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, you should"))
+
+        if words[0] == 'would':
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, I would"))
+
+        if words[0] == 'does':
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, it does"))
+
+        if words[0] == 'do':
+            bot.send_message(chat_id=update.message.chat_id, text=tr2other("Yes, you do"))
+
         else:
-            bot.send_message(chat_id = update.message.chat_id, text=words)
+            bot.send_message(chat_id = update.message.chat_id, text=prediction)
 
 
 
@@ -307,6 +209,7 @@ def giveClosestHospital(bot, update, user_data):
         text = "This is the location of the nearest hospital in which your type of disease can be treated.\nThis hospital is called " + nom + " and its address is " + address + "\n" + "I would recommend you to contact it through the telefon " + telefon + " so you can book a meet with an specialist."
         bot.send_message(chat_id=update.message.chat_id, text=tr2other(text,user_data['language']))
         os.remove(name)
+
 
     except Exception as e:
         print(e)
